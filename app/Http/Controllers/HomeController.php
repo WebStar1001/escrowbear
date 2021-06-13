@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\InviteNotification;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
     public function getInvited(Request $request)
     {
-        $emailcontent = [];
-        Mail::send('emails.getinvited', $emailcontent, function ($message) {
-            $message->to('eric9178vadim@gmail.com', 'Learning Laravel Support')
-                ->subject('Contact using Our Contact Form');
-        });
+        $emailcontent = ['invite_code'=>Str::random()];
+
+        Mail::to($request->email)->send(new InviteNotification($emailcontent));
+
+        return redirect()->back()->with('success',"Successfully Sent Invitation Code");
     }
 }
