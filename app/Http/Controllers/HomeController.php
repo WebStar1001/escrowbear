@@ -13,7 +13,7 @@ class HomeController extends Controller
     {
         $emailcontent = ['invite_code'=>Str::random()];
 
-        Mail::to($request->email)->send(new InviteNotification($emailcontent));
+        Mail::to($request->email_address)->send(new InviteNotification($emailcontent));
 
         return redirect()->back()->with('success',"Successfully Sent Invitation Code");
     }
