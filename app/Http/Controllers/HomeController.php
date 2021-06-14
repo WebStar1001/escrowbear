@@ -11,10 +11,17 @@ class HomeController extends Controller
 {
     public function getInvited(Request $request)
     {
-        $emailcontent = ['invite_code'=>Str::random()];
+        $emailcontent = ['invite_code' => Str::random()];
 
         Mail::to($request->email_address)->send(new InviteNotification($emailcontent));
 
-        return redirect()->back()->with('success',"Successfully Sent Invitation Code");
+        return redirect()->back()->with('success', "Successfully Sent Invitation Code");
+    }
+
+    public function sitemaps()
+    {
+        return response()->view('sitemaps')
+            ->header('Content-Type', 'text/xml');
+
     }
 }
