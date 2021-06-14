@@ -6,17 +6,17 @@ body {
 body * {
   font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body button,
 body a {
   cursor: pointer;
-  outline: none;
+  outline: none!important;
 }
 
 body button:hover {
-  outline: none
+  outline: none!important;
 }
 
 body p {
@@ -35,11 +35,11 @@ body header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-bottom: 1px solid #eae8e8;
 }
 
@@ -53,11 +53,11 @@ body header.opened .menu {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -69,8 +69,8 @@ body header.opened .menu {
 body header.opened .menu ul {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 body header.opened .menu ul li {
@@ -101,8 +101,8 @@ body header .menu {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 body header .menu ul {
@@ -148,11 +148,11 @@ body header .menu .dropdown .board {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border: 1px solid #c9c9c9;
   border-radius: 25px;
   font-size: 15px;
@@ -180,12 +180,12 @@ body header .menu .dropdown .dropdown_list {
   top: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, 5px);
-          transform: translate(-50%, 5px);
+  transform: translate(-50%, 5px);
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background: #fff;
   padding: 10px 20px;
   border: 1px solid #eae8e8;
@@ -197,8 +197,8 @@ body header .menu .dropdown .dropdown_list li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -206,7 +206,7 @@ body header .menu .dropdown .dropdown_list li img {
   width: 18px;
   height: 18px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -234,8 +234,8 @@ body .hero {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
   width: 100%;
   max-width: 1540px;
@@ -336,7 +336,7 @@ body .hero > div:first-child button {
 body .hero > div:last-child {
   width: 46%;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 body .hero > div:last-child img {
@@ -404,11 +404,11 @@ body .hyperescrow .container .list3box ul li {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0 25px;
 }
 
@@ -442,11 +442,11 @@ body .banking_partners {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
 }
 
@@ -480,8 +480,8 @@ body .banking_partners > div:nth-child(2) {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   margin-bottom: 38px;
 }
 
@@ -502,11 +502,11 @@ body .banking_partners > div:nth-child(3) .item {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 body .banking_partners > div:nth-child(3) .item .title {
@@ -536,8 +536,8 @@ body .banking_partners > div:nth-child(4) div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 body .banking_partners > div:nth-child(4) div img {
@@ -570,7 +570,7 @@ body .howcan .types .type-1 {
   top: 50%;
   right: 0;
   -webkit-transform: translateX(20px);
-          transform: translateX(20px);
+  transform: translateX(20px);
 }
 
 body .howcan .types .type-2 {
@@ -582,7 +582,7 @@ body .howcan .types .type-3 {
   top: 20px;
   left: 15%;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 body .howcan .types .type-4 {
@@ -612,8 +612,8 @@ body .howcan .container {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   max-width: 1400px;
   padding: 0 20px;
   padding-top: 148px;
@@ -670,8 +670,8 @@ body .transact .container {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0 auto;
 }
 
@@ -684,8 +684,8 @@ body .transact .container > div:first-child {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 body .transact .container > div:first-child img {
@@ -701,7 +701,7 @@ body .transact .container .content {
 
 body .transact .container .content .bow {
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   margin-bottom: 50px;
 }
 
@@ -731,8 +731,8 @@ body .faq {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   padding: 55px 110px 110px;
   position: relative;
 }
@@ -744,7 +744,7 @@ body .faq .dots {
 body .faq .content {
   width: 45%;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 body .faq .content .title {
@@ -761,7 +761,7 @@ body .faq .content .items .faq-item {
 
 body .faq .content .items .faq-item.collapsed .header img {
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 body .faq .content .items .faq-item.collapsed .body {
@@ -775,11 +775,11 @@ body .faq .content .items .faq-item .header {
   display: flex;
   cursor: pointer;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-bottom: 30px;
 }
 
@@ -792,7 +792,7 @@ body .faq .content .items .faq-item .header span {
 
 body .faq .content .items .faq-item .header img {
   -webkit-transform: rotate(0);
-          transform: rotate(0);
+  transform: rotate(0);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -815,8 +815,8 @@ body .faq .image {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 body .faq .image img {
@@ -830,11 +830,11 @@ body .stay {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -854,10 +854,10 @@ body .stay > div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 body .stay > div .content {
@@ -899,11 +899,11 @@ body .sponsor {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: #8000ff;
   padding: 123px 20px 312px;
   margin-top: -100px;
@@ -923,8 +923,8 @@ body .sponsor div {
   display: flex;
   opacity: 0.8;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 body .sponsor div img {
@@ -945,13 +945,13 @@ body .about div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 50%;
   -webkit-transform: translate(-50%, -40%);
-          transform: translate(-50%, -40%);
+  transform: translate(-50%, -40%);
 }
 
 body .about div img:first-child {
@@ -978,8 +978,8 @@ body .avatars > div.crypto {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 body .avatars > div.crypto .list {
@@ -1015,8 +1015,8 @@ body .avatars > div.supported_by {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 body .avatars > div.supported_by .keepkey {
@@ -1029,8 +1029,8 @@ body .avatars > div.supported_by div {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-right: 42px;
 }
 
@@ -1061,8 +1061,8 @@ body footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 body footer .copyright {
@@ -1205,19 +1205,19 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     right: auto;
     left: 0;
     -webkit-transform: translateX(-30px);
-            transform: translateX(-30px);
+    transform: translateX(-30px);
   }
   body .howcan .types .type-2 {
     top: 105px;
     right: 0;
     -webkit-transform: translateX(15px);
-            transform: translateX(15px);
+    transform: translateX(15px);
   }
   body .howcan .types .type-3 {
     top: 20px;
     left: 15%;
     -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
   body .howcan .types .type-4 {
     top: 35%;
@@ -1229,7 +1229,7 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     right: auto;
     left: 0;
     -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    transform: translateX(-10px);
   }
   body .howcan .types .type-6 {
     top: 20%;
@@ -1244,7 +1244,7 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     position: absolute;
     left: 0;
     -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     padding-right: 0;
   }
   body .faq .content {
@@ -1371,8 +1371,8 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
   body .sponsor div {
     width: 100%;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1384,8 +1384,8 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
   body .avatars {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body .avatars > div {
     width: 100%;
@@ -1393,8 +1393,8 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   body footer {
     padding-bottom: 40px;
@@ -1414,8 +1414,8 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
   body .hero {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     padding: 50px 20px;
   }
   body .hero > div:first-child .description {
@@ -1433,7 +1433,7 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     left: 0;
     top: 40%;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
   body .hero .types .type-4 {
     display: block;
@@ -1445,36 +1445,36 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     display: block;
     right: 0;
     -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    transform: translateX(10px);
   }
   body .hyperescrow .container .main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body .hyperescrow .container .main > div:first-child {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+    order: 2;
   }
   body .hyperescrow .container .main > div:last-child {
     padding-left: 0;
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
   }
   body .hyperescrow .container .list3box ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body .hyperescrow .container .list3box ul li {
     margin-bottom: 30px;
@@ -1489,8 +1489,8 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     padding: 76px 20px 14px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body .howcan .container .content {
     width: 100%;
@@ -1516,8 +1516,8 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   body .transact {
     padding: 138px 0 88px;
@@ -1525,19 +1525,19 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
   body .transact .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body .transact .container > div {
     width: 100%;
   }
   body .transact .container > div:first-child {
     -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+    order: 2;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
   body .transact .container > div:first-child img {
     width: 80%;
@@ -1545,8 +1545,8 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
   body .transact .container > div:last-child {
     padding: 0;
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
     margin-bottom: 20px;
   }
   body .transact .container > div:last-child .title {
@@ -1567,8 +1567,8 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     padding: 50px 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body .faq .content {
     width: 100%;
@@ -1600,31 +1600,31 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
   body .stay > div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body .stay > div .content {
     width: 100%;
     padding-left: 0;
     margin-bottom: 25px;
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
   }
   body .stay > div .image {
     width: 100%;
     -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+    order: 2;
   }
   body footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 37px 20px 133px;
   }
   body footer > img {
@@ -1639,11 +1639,11 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   body footer .copyright .title {
     font-size: 40px;
@@ -1657,8 +1657,8 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
   body footer .contact_info {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
   body footer .contact_info .detail_info {
     margin-left: 0;
@@ -1687,11 +1687,11 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-bottom: 10px;
   }
   body .hero > div:first-child .title {
@@ -1730,11 +1730,11 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-bottom: 10px;
   }
   body .hyperescrow .container .main > div:last-child .title {
@@ -1798,7 +1798,7 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
   body .stay > div .image img {
     width: 150%;
     -webkit-transform: translate(-170px, 0);
-            transform: translate(-170px, 0);
+    transform: translate(-170px, 0);
   }
   body .stay > div .content .title {
     font-size: 28px;
@@ -1844,11 +1844,11 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     position: absolute;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     right: 0;
     margin-top: 30px;
   }
