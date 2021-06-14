@@ -157,6 +157,8 @@ body header .menu .dropdown .board {
 
 body header .menu .dropdown .board .flag {
   border-radius: 50%;
+  width: 18px;
+  height: 18px;
 }
 
 body header .menu .dropdown.opened .dropdown_list {
@@ -166,6 +168,9 @@ body header .menu .dropdown.opened .dropdown_list {
 }
 
 body header .menu .dropdown .dropdown_list {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -193,6 +198,10 @@ body header .menu .dropdown .dropdown_list li {
 }
 
 body header .menu .dropdown .dropdown_list li img {
+  width: 18px;
+  height: 18px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   margin-right: 10px;
 }
