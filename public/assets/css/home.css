@@ -12,6 +12,11 @@ body * {
 body button,
 body a {
   cursor: pointer;
+  outline: none;
+}
+
+body button:hover {
+  outline: none
 }
 
 body p {
