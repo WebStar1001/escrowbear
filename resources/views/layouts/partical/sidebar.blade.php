@@ -1,9 +1,9 @@
 <!-- .nk-sidebar-start -->
 
-<div class="nk-sidebar-element nk-sidebar-head">
-    <div class="nk-sidebar-brand">
-        <a href="html/crypto/index.html" class="logo-link nk-sidebar-logo">
-            <h2>Escrowbear</h2>
+<div class="nk-sidebar-element nk-sidebar-head justify-content-center">
+    <div class="nk-sidebar-brand ">
+        <a href="{{route('home')}}" class="logo-link nk-sidebar-logo">
+            <h2 class="logo">Escrowbear</h2>
             {{--            <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">--}}
             {{--            <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x"--}}
             {{--                 alt="logo-dark">--}}

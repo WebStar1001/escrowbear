@@ -30,8 +30,6 @@
                             <div class="nk-block">
                                 <div class="card card-bordered">
                                     <div class="card-inner">
-                                        <h4 class="title text-soft mb-4 overline-title">Notification - Confirmation
-                                            Email Template</h4>
                                         <table class="email-wraper">
                                             <tr>
                                                 <td class="py-5">

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home/index');
-});
+})->name('home');
 Route::post('/get-invited', [App\Http\Controllers\HomeController::class, 'getInvited'])
     ->name('get-invited');
 

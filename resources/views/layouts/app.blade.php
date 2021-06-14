@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <meta name="description" content="Escrow website for Crypto Currency">
 
     <!-- Scripts -->
     <!-- Styles -->
