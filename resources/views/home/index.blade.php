@@ -355,7 +355,22 @@
 </body>
 <script src="{{asset('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
 <script src="{{asset('dashlite/assets/js/scripts.js?ver=2.2.0')}}"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-199462509-1">
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-199462509-1');
+</script>
 <script type="text/javascript">
+
     $(document).ready(function () {
         $('.faq-item .header').click(function () {
             $(this).closest('.faq-item').toggleClass('collapsed');
