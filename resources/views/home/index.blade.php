@@ -25,7 +25,7 @@
             and white label anonymity, it is the only escrow you can trust for high value hyperledger embedded
             transfers.
         </p>
-        <button>Get Invited</button>
+        <button data-toggle="modal" data-target="#getInvitedModal">Get Invited</button>
     </div>
     <div class="types">
         <img src="{{asset('assets/img/home/type-1.png')}}" class="type-1"/>
