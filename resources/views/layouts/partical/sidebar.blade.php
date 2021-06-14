@@ -4,10 +4,6 @@
     <div class="nk-sidebar-brand ">
         <a href="{{route('home')}}" class="logo-link nk-sidebar-logo">
             <h2 class="logo">Escrowbear</h2>
-            {{--            <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">--}}
-            {{--            <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x"--}}
-            {{--                 alt="logo-dark">--}}
-            {{--            <span class="nio-version">Crypto</span>--}}
         </a>
     </div>
     <div class="nk-menu-trigger mr-n2">
