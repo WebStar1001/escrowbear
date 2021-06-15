@@ -3,19 +3,33 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\InviteNotification;
-use Illuminate\Support\Str;
+use App\Models\Core\Invitations;
 
 class HomeController extends Controller
 {
     public function getInvited(Request $request)
     {
-        $emailcontent = ['invite_code' => Str::random()];
+        $invite_code = Str::random();
 
-        Mail::to($request->email_address)->send(new InviteNotification($emailcontent));
+        $invited = Invitations::updateOrCreate(
+            ['email'=>$request->email_address],
+            ['invite_code'=>$invite_code]
+        );
+        if($invited){
 
-        return redirect()->back()->with('success', "Successfully Sent Invitation Code");
+            $emailcontent = ['invite_code' => $invite_code];
+
+            Mail::to($request->email_address)->send(new InviteNotification($emailcontent));
+
+            return redirect()->back()->with('success', "Successfully Sent Invitation Code");
+
+        }else{
+            return redirect()->back()->with('error', "Failed to Sent Invitation Code");
+        }
+
     }
 
     public function sitemaps()
