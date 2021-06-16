@@ -27,7 +27,8 @@ Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])
     ->name('dashboard')
-    ->middleware(['auth', 'g2fa', 'verified']);
+    ->middleware(['auth', 'g2fa', 'verified'])
+;
 Route::get('/dashboard/welcome', [App\Http\Controllers\WelcomeController::class, 'index'])
     ->name('welcome')
     ->middleware(['auth', 'g2fa']);

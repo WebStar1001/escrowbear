@@ -6,16 +6,12 @@
         </div>
         <div class="nk-header-brand d-xl-none">
             <a href="{{route('dashboard')}}" class="logo-link">
-                <h2>Escrowbear</h2>
-                {{--                <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">--}}
-                {{--                <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x"--}}
-                {{--                     alt="logo-dark">--}}
-                {{--                <span class="nio-version">Crypto</span>--}}
+                <h2 class="logo">Escrowbear</h2>
             </a>
         </div>
-        <div class="d-none d-md-block">
+        <div class="d-none">
             <a href="#" class="btn btn-primary">Create Escrow</a>
-            <a href="#" class="btn btn-success ml-3">Accept Escrow</a>
+            <a href="#" class="btn btn-success ml-lg-3 mt-sm-2 mt-lg-0">Accept Escrow</a>
         </div>
         <div class="nk-header-tools">
             <ul class="nk-quick-nav">
@@ -101,7 +97,7 @@
                     <div class="dropup">
                         <a href="#" class="dropdown-indicator has-indicator" data-toggle="dropdown" data-offset="0,10">
                             <span class="nk-menu-icon"><em class="icon ni ni-globe"></em></span>
-                            <span class="nk-menu-text">English</span>
+                            <span class="nk-menu-text d-none d-lg-inline">English</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
                             <ul class="language-list">
@@ -143,7 +139,7 @@
                             <span class="nk-menu-icon"><img
                                     src="{{asset('assets/img/currency/icons8-us-dollar-48.png')}}" alt=""
                                     class="language-flag"></span>
-                            <span class="nk-menu-text">Dollar</span>
+                            <span class="nk-menu-text d-none d-lg-inline">Dollar</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
                             <ul class="language-list">

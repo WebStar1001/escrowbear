@@ -33,22 +33,24 @@
                         <span class="sub-text">{{Auth::user()->email}}</span>
                     </div>
                 </div>
-                <div class="d-flex">
-                    <a href="#" class="btn btn-sm btn-primary">Create Escrow</a>
-                    <a href="#" class="btn btn-sm btn-success ml-2">Accept Escrow</a>
-                </div>
+                @if(is_verified())
+                    <div class="d-flex">
+                        <a href="#" class="btn btn-sm btn-primary">Create Escrow</a>
+                        <a href="#" class="btn btn-sm btn-success ml-2">Accept Escrow</a>
+                    </div>
+                @endif
             </div><!-- .nk-sidebar-widget -->
             <div class="nk-sidebar-widget nk-sidebar-widget-full d-xl-none pt-0">
                 <a class="nk-profile-toggle toggle-expand" data-target="sidebarProfile" href="#">
                     <div class="user-card-wrap">
                         <div class="user-card">
                             @if(Auth::user()->profile_path == '')
-                                <div class="user-avatar xl bg-primary">
+                                <div class="user-avatar lg bg-primary">
                                     <img src="{{asset('dashlite/images/avatar/blank.png')}}"/>
                                     <div class="status dot dot-lg dot-success"></div>
                                 </div>
                             @else
-                                <div class="user-avatar xl bg-primary">
+                                <div class="user-avatar lg bg-primary">
                                     <img src="{{profile_path(Auth::user()->profile_path)}}"/>
                                     <div class="status dot dot-lg dot-success"></div>
                                 </div>

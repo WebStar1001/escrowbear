@@ -23,6 +23,11 @@ class UserVerified
                 if(!Auth::user()->google2fa_enable||!Auth::user()->profile_path||Auth::user()->kycVerification){
                     return redirect(route('welcome'));
                 }
+            }else{
+//                if(!Auth::user()->google2fa_enable||!Auth::user()->profile_path||Auth::user()->kycVerification){
+//                    return redirect(route('welcome'));
+//                }
+                return $next($request);
             }
 
         }
