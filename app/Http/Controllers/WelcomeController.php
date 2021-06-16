@@ -46,7 +46,7 @@ class WelcomeController extends Controller
                 $request->file('file')->storeAs('kyc', $fileName, 'public');
                 KycVerification::create([
                     'card_image' => $fileName,
-                    'status' => 'Pending',
+                    'status' => 'verified',
                     'user_id' => Auth::id(),
                     'type' => $request->id_type
                 ]);

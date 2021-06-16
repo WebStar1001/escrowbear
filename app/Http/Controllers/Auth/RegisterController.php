@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Core\Invitations;
 
 class RegisterController extends Controller
 {
@@ -36,6 +38,17 @@ class RegisterController extends Controller
      *
      * @return void
      */
+    public function showRegistrationForm(Request $request)
+    {
+        $invite_code = $request->get('invite_code');
+        $is_invited = Invitations::where('invite_code', $invite_code)->first();
+        if($is_invited){
+            return view('auth.register');
+        }else{
+            return view('auth.inviteerror');
+        }
+    }
+
     public function __construct()
     {
         $this->middleware('guest');
