@@ -58,7 +58,7 @@ return [
     /*
      * One Time Password View.
      */
-    'view' => 'dashboard.profile.2fa_verify',
+    'view' => 'dashboard.2fa.2fa_verify',
 
     /*
      * One Time Password error message.

@@ -2,7 +2,7 @@
 @section('content')
     <div class="container-xl wide-lg">
         <div class="nk-content-body">
-            @include('dashboard/profile/navbar')
+{{--            @include('dashboard/profile/navbar')--}}
             <div class="nk-block">
                 <div class="card-header"><strong>Two Factor Authentication</strong></div>
                 <div class="card-body">
@@ -21,8 +21,16 @@
                             {{ session('success') }}
                         </div>
                     @endif
-
-                    @if(!$data['user']->google2fa_enable)
+                    @if($data['user']->google2fa_secret == null)
+                        <form class="form-horizontal" method="POST" action="{{ route('generate2faSecret') }}">
+                            {{ csrf_field() }}
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">
+                                    Generate Secret Key to Enable 2FA
+                                </button>
+                            </div>
+                        </form>
+                    @elseif(!$data['user']->google2fa_enable)
                         1. Scan this QR code with your Google Authenticator App. Alternatively, you can use
                         the code: <code>{{ $data['secret'] }}</code><br/>
                         <img src="{{$data['google2fa_url'] }}" alt="">

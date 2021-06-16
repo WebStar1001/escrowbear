@@ -47,7 +47,7 @@ Route::get('/myaccount', [App\Http\Controllers\MyaccountController::class, 'inde
     ->middleware(['auth', 'g2fa', 'verified']);
 Route::get('/security', [App\Http\Controllers\SecurityController::class, 'index'])
     ->name('security')
-    ->middleware(['auth', 'g2fa', 'verified']);
+    ->middleware(['auth', 'verified']);
 Route::get('/notification', [App\Http\Controllers\NotificationController::class, 'index'])
     ->name('notification')
     ->middleware(['auth', 'g2fa', 'verified']);

@@ -42,7 +42,7 @@ class Google2FAController extends Controller
             'google2fa_url' => $google2fa_url
         );
 
-        return view('dashboard/profile/2fa_settings')->with('data', $data);
+        return view('dashboard/2fa/2fa_settings')->with('data', $data);
     }
 
     /**
@@ -52,7 +52,6 @@ class Google2FAController extends Controller
         $user = Auth::user();
         // Initialise the 2FA class
         $google2fa = app('pragmarx.google2fa');
-//        print_r($user);exit;
 
         // Add the secret key to the registration data
         $user->google2fa_enable = 0;
@@ -75,7 +74,7 @@ class Google2FAController extends Controller
         if($valid){
             $user->google2fa_enable = 1;
             $user->save();
-            return redirect('profile/security')->with('success',"2FA is enabled successfully.");
+            return redirect('security')->with('success',"2FA is enabled successfully.");
         }else{
             return redirect('g2fa')->with('error',"Invalid verification Code, Please try again.");
         }
@@ -96,6 +95,6 @@ class Google2FAController extends Controller
         $user = Auth::user();
         $user->google2fa_enable = 0;
         $user->save();
-        return redirect('profile/security')->with('success',"2FA is now disabled.");
+        return redirect('security')->with('success',"2FA is now disabled.");
     }
 }

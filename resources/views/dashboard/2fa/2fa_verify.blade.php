@@ -15,7 +15,7 @@
     <link id="skin-default" rel="stylesheet" href="{{asset('dashlite/assets/css/theme.css?ver=2.2.0')}}">
     @yield('style')
 </head>
-<body class="nk-body npc-crypto dark-mode has-sidebar" theme="dark">
+<body class="nk-body npc-crypto has-sidebar" theme="dark">
 <div class="nk-app-root">
     <!-- main @s -->
     <div class="nk-main ">
@@ -24,12 +24,12 @@
             <div class="nk-content">
                 <div class="brand-logo pb-4 pt-5 text-center">
                     <a href="html/index.html" class="logo-link">
-                        <h2>Escrowbear</h2>
+                        <h2 class="logo">Escrowbear</h2>
                         {{--                            <img class="logo-light logo-img logo-img-lg" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">--}}
                         {{--                            <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">--}}
                     </a>
                 </div>
-                <div class="container">
+                <div class="nk-block">
                     <div class="row justify-content-md-center">
                         <div class="col-md-8 ">
                             <div class="card">
