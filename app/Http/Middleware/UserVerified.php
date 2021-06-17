@@ -19,14 +19,17 @@ class UserVerified
     {
         if (Auth::check()) {
             if (Auth::user()->isUser()) {
-                if (!Auth::user()->google2fa_enable || !Auth::user()->profile_path || Auth::user()->kycVerification) {
+                if (!Auth::user()->google2fa_enable || !Auth::user()->profile_path || !Auth::user()->kycVerification) {
                     return redirect(route('welcome'));
+                } else {
+                    return $next($request);
                 }
             } else {
-                if (!Auth::user()->google2fa_enable || !Auth::user()->profile_path || Auth::user()->kycVerification) {
+                if (!Auth::user()->google2fa_enable || !Auth::user()->profile_path || !Auth::user()->kycVerification) {
                     return redirect(route('welcome'));
+                } else {
+                    return $next($request);
                 }
-//                return $next($request);
             }
 
         }

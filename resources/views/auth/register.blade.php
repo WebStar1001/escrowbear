@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset_url('dashlite/assets/css/dashlite.css?ver=2.2.0')}}">
     <link id="skin-default" rel="stylesheet" href="{{asset_url('dashlite/assets/css/theme.css?ver=2.2.0')}}">
+    <link id="skin-default" rel="stylesheet" href="{{asset_url('assets/css/custom.css?ver=2.2.0')}}">
     @yield('style')
 </head>
 <body class="nk-body npc-crypto has-sidebar">
@@ -24,7 +25,7 @@
             <div class="nk-split-content nk-block-area nk-block-area-column nk-auth-container bg-white">
                 <div class="nk-block nk-block-middle nk-auth-body wide-md">
                     <div class="brand-logo pb-4 text-center">
-                        <a href="html/index.html" class="logo-link">
+                        <a href="{{route('home')}}" class="logo-link">
                             <h2 class="logo">Escrowbear</h2>
                         </a>
                     </div>
@@ -401,30 +402,6 @@
                             </form>
                             <div class="form-note-s2 text-center pt-4"> Already have an account? <a
                                     href="{{route('login')}}"><strong>Sign in instead</strong></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="nk-footer nk-auth-footer-full">
-                    <div class="container wide-lg">
-                        <div class="row g-3">
-                            <div class="col-lg-6 order-lg-last">
-                                <ul class="nav nav-sm justify-content-center justify-content-lg-end">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Terms & Condition</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Privacy Policy</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Help</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="nk-block-content text-center text-lg-left">
-                                    <p class="text-soft">&copy; 2021 Escrowbear. All Rights Reserved.</p>
-                                </div>
                             </div>
                         </div>
                     </div>

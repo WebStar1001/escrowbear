@@ -75,12 +75,6 @@ Route::group(['prefix' => 'g2fa'], function () {
     })->name('2faVerify')->middleware('g2fa');
 });
 
-// test middleware
-Route::get('/test_middleware', function () {
-    return "2FA middleware work!";
-})->middleware(['auth', '2fa']);
-
-
 Route::post('/register/upload-profile', [App\Http\Controllers\WelcomeController::class, 'uploadProfile'])
     ->name('upload-profile')
     ->middleware(['auth', 'g2fa']);

@@ -388,6 +388,9 @@
             $('#lang .board .flag').attr('src', $(this).find('img').attr('src'));
             $('#lang .board span').text($(this).text());
         });
+        $('#goToDashboardBtn').click(function () {
+            window.location.href = 'dashboard';
+        })
     });
 </script>
 </html>

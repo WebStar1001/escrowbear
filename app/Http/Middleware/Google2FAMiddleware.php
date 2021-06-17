@@ -16,12 +16,12 @@ class Google2FAMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $authenticator = app(Google2FAAuthenticator::class)->boot($request);
-
-        if ($authenticator->isAuthenticated()) {
+//        $authenticator = app(Google2FAAuthenticator::class)->boot($request);
+//
+//        if ($authenticator->isAuthenticated()) {
             return $next($request);
-        }
-
-        return $authenticator->makeRequestOneTimePasswordResponse();
+//        }
+//
+//        return $authenticator->makeRequestOneTimePasswordResponse();
     }
 }
