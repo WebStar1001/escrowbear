@@ -45,15 +45,16 @@ Route::get('/wallet/{coin}', [App\Http\Controllers\WalletController::class, 'coi
 Route::get('/myaccount', [App\Http\Controllers\MyaccountController::class, 'index'])
     ->name('myaccount')
     ->middleware(['auth', 'g2fa', 'verified']);
-Route::get('/security', [App\Http\Controllers\SecurityController::class, 'index'])
-    ->name('security')
-    ->middleware(['auth', 'verified']);
 Route::get('/notification', [App\Http\Controllers\NotificationController::class, 'index'])
     ->name('notification')
     ->middleware(['auth', 'g2fa', 'verified']);
 Route::get('/marketcap', [App\Http\Controllers\MarketcapController::class, 'index'])
     ->name('marketcap')
     ->middleware(['auth', 'g2fa', 'verified']);
+
+Route::get('/security', [App\Http\Controllers\SecurityController::class, 'index'])
+    ->name('security')
+    ->middleware(['auth']);
 
 Route::post('/security/set-master-code', [App\Http\Controllers\SecurityController::class, 'setMasterCode'])
     ->name('set-master-code')

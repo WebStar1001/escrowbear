@@ -11,8 +11,8 @@
 
     <!-- Scripts -->
     <!-- Styles -->
-    <link rel="stylesheet" href="{{asset('dashlite/assets/css/dashlite.css?ver=2.2.0')}}">
-    <link id="skin-default" rel="stylesheet" href="{{asset('dashlite/assets/css/theme.css?ver=2.2.0')}}">
+    <link rel="stylesheet" href="{{asset_url('dashlite/assets/css/dashlite.css?ver=2.2.0')}}">
+    <link id="skin-default" rel="stylesheet" href="{{asset_url('dashlite/assets/css/theme.css?ver=2.2.0')}}">
     @yield('style')
 </head>
 <body class="nk-body npc-crypto has-sidebar">
@@ -111,8 +111,8 @@
                         <div class="slider-item">
                             <div class="nk-feature nk-feature-center">
                                 <div class="nk-feature-img">
-                                    <img class="round" src="{{asset('dashlite/images/slides/promo-a.png')}}" srcset="
-                                         {{asset('dashlite//images/slides/promo-a2x.png')}} 2x" alt="">
+                                    <img class="round" src="{{asset_url('dashlite/images/slides/promo-a.png')}}" srcset="
+                                         {{asset_url('dashlite//images/slides/promo-a2x.png')}} 2x" alt="">
                                 </div>
                                 <div class="nk-feature-content py-4 p-sm-5">
                                     <h4>Escrowbear</h4>
@@ -124,8 +124,8 @@
                         <div class="slider-item">
                             <div class="nk-feature nk-feature-center">
                                 <div class="nk-feature-img">
-                                    <img class="round" src="{{asset('dashlite/images/slides/promo-b.png')}}"
-                                         srcset="{{asset('dashlite/images/slides/promo-b2x.png')}} 2x" alt="">
+                                    <img class="round" src="{{asset_url('dashlite/images/slides/promo-b.png')}}"
+                                         srcset="{{asset_url('dashlite/images/slides/promo-b2x.png')}} 2x" alt="">
                                 </div>
                                 <div class="nk-feature-content py-4 p-sm-5">
                                     <h4>Escrowbear</h4>
@@ -137,8 +137,8 @@
                         <div class="slider-item">
                             <div class="nk-feature nk-feature-center">
                                 <div class="nk-feature-img">
-                                    <img class="round" src="{{asset('dashlite/images/slides/promo-c.png')}}"
-                                         srcset="{{asset('dashlite/images/slides/promo-c2x.png')}} 2x" alt="">
+                                    <img class="round" src="{{asset_url('dashlite/images/slides/promo-c.png')}}"
+                                         srcset="{{asset_url('dashlite/images/slides/promo-c2x.png')}} 2x" alt="">
                                 </div>
                                 <div class="nk-feature-content py-4 p-sm-5">
                                     <h4>Escrowbear</h4>
@@ -156,7 +156,7 @@
         </div>
     </div>
 </div>
-<script src="{{asset('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
-<script src="{{asset('dashlite/assets/js/scripts.js?ver=2.2.0')}}"></script>
+<script src="{{asset_url('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
+<script src="{{asset_url('dashlite/assets/js/scripts.js?ver=2.2.0')}}"></script>
 </body>
 </html>

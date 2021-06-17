@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('style')
-    <link id="skin-default" rel="stylesheet" href="{{asset('assets/css/croppie.min.css')}}">
+    <link id="skin-default" rel="stylesheet" href="{{asset_url('assets/css/croppie.min.css')}}">
 @endsection
 @section('content')
     <div class="container-xl wide-lg">
@@ -50,7 +50,7 @@
                                     <div class="align-center gx-3">
                                         @if(Auth::user()->profile_path == '')
                                             <div class="flex-item">
-                                                <div class="progress progress-sm progress-pill w-80px">
+                                                <div class="progress progress-sm progress-pill w-12px">
                                                     <div class="progress-bar" data-progress="0"></div>
                                                 </div>
                                             </div>
@@ -61,7 +61,7 @@
                                             </div>
                                         @elseif(!Auth::user()->kycVerification)
                                             <div class="flex-item">
-                                                <div class="progress progress-sm progress-pill w-80px">
+                                                <div class="progress progress-sm progress-pill w-120px">
                                                     <div class="progress-bar" data-progress="33.3"></div>
                                                 </div>
                                             </div>
@@ -72,7 +72,7 @@
                                             </div>
                                         @elseif(!Auth::user()->google2fa_enable)
                                             <div class="flex-item">
-                                                <div class="progress progress-sm progress-pill w-80px">
+                                                <div class="progress progress-sm progress-pill w-120px">
                                                     <div class="progress-bar" data-progress="66.6"></div>
                                                 </div>
                                             </div>
@@ -83,7 +83,7 @@
                                             </div>
                                         @elseif(Auth::user()->google2fa_enable)
                                             <div class="flex-item">
-                                                <div class="progress progress-sm progress-pill w-80px">
+                                                <div class="progress progress-sm progress-pill w-120px">
                                                     <div class="progress-bar" data-progress="100"></div>
                                                 </div>
                                             </div>
@@ -108,12 +108,13 @@
                                                 Profile picture must be 200px * 200px
                                             </span>
                                         </div>
-                                        <form method="post" action="{{route('upload-profile')}}" enctype="multipart/form-data">
+                                        <form method="post" action="{{route('upload-profile')}}"
+                                              enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-sm-4">
                                                     <div class="user-avatar xl bg-primary">
-                                                        <img src="{{asset('dashlite/images/avatar/blank.png')}}"
+                                                        <img src="{{asset_url('dashlite/images/avatar/blank.png')}}"
                                                              id="profilePreview"/>
                                                         <div class="status dot dot-lg dot-success"></div>
                                                     </div>
@@ -136,7 +137,8 @@
                                             <div class="row mt-3 justify-content-end">
                                                 @if (count($errors) > 0)
                                                     <div class="alert alert-danger">
-                                                        <strong>Whoops!</strong> There were some problems with your input.
+                                                        <strong>Whoops!</strong> There were some problems with your
+                                                        input.
                                                         <ul>
                                                             @foreach ($errors->all() as $error)
                                                                 <li>{{ $error }}</li>
@@ -204,7 +206,8 @@
                                                     <p>Looks like your have not verified your indentity yet. Please
                                                         verify yourself to get full access to Escrow.</p>
                                                     <ul class="list list-sm list-checked">
-                                                        <li>Fiat Currency Wallet <span>(USD, EUR, GBP, Ringgit)</span></li>
+                                                        <li>Fiat Currency Wallet <span>(USD, EUR, GBP, Ringgit)</span>
+                                                        </li>
                                                         <li>Digital Crypto Wallet <span>(ETH, BTC, USDT, XRP)</span>
                                                         </li>
                                                         <li>Receive and send payment with EscrowBear</li>
@@ -215,6 +218,22 @@
                                                 </div>
                                             </div>
                                         @elseif(!Auth::user()->google2fa_enable)
+                                            <div class="nk-block-content">
+                                                <div class="nk-block-content-head">
+                                                    <h4>Secure Your account</h4>
+                                                    <span class="sub-text sub-text-sm text-soft"></span>
+                                                </div>
+                                                <p>
+                                                    Secure your account with 2FA security. When it is activated you will
+                                                    need to
+                                                    enter not only your password, but also a special code using app. You
+                                                    can
+                                                    receive this code by in mobile app.
+                                                </p>
+                                                <div class="nk-block-actions text-right">
+                                                    <a href="{{url('g2fa')}}" class="btn btn-primary">Enable Google 2FA</a>
+                                                </div>
+                                            </div>
                                         @endif
                                     </div>
                             </div><!-- .col -->
@@ -226,6 +245,6 @@
     </div>
 @endsection
 @section('script')
-    <script src="{{asset('assets/js/croppie.js')}}"></script>
-    <script src="{{asset('assets/js/welcome.js')}}"></script>
+    <script src="{{asset_url('assets/js/croppie.js')}}"></script>
+    <script src="{{asset_url('assets/js/welcome.js')}}"></script>
 @endsection

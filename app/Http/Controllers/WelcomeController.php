@@ -28,6 +28,7 @@ class WelcomeController extends Controller
      */
     public function index()
     {
+
         return view('dashboard/welcome');
     }
 
@@ -46,7 +47,7 @@ class WelcomeController extends Controller
                 $request->file('file')->storeAs('kyc', $fileName, 'public');
                 KycVerification::create([
                     'card_image' => $fileName,
-                    'status' => 'verified',
+                    'status' => 'pending',
                     'user_id' => Auth::id(),
                     'type' => $request->id_type
                 ]);
@@ -78,8 +79,12 @@ class WelcomeController extends Controller
         return response()->json(['success' => 'Successfully Deleted']);
     }
 
-    public function kycSubmit(Request $request){
-        print_r($request->all());exit;
+    public function kycSubmit(Request $request)
+    {
+        KycVerification::where('user_id', Auth::id())->update(
+            ['status'=>'verified']
+        );
+        return redirect(route('welcome'));
     }
 
     public function uploadProfile(Request $request)

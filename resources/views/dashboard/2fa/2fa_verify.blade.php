@@ -11,8 +11,8 @@
 
     <!-- Scripts -->
     <!-- Styles -->
-    <link rel="stylesheet" href="{{asset('dashlite/assets/css/dashlite.css?ver=2.2.0')}}">
-    <link id="skin-default" rel="stylesheet" href="{{asset('dashlite/assets/css/theme.css?ver=2.2.0')}}">
+    <link rel="stylesheet" href="{{asset_url('dashlite/assets/css/dashlite.css?ver=2.2.0')}}">
+    <link id="skin-default" rel="stylesheet" href="{{asset_url('dashlite/assets/css/theme.css?ver=2.2.0')}}">
     @yield('style')
 </head>
 <body class="nk-body npc-crypto has-sidebar" theme="dark">

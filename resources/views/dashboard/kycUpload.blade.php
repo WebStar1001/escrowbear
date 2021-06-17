@@ -97,18 +97,26 @@
                                         </div>
                                         <div class="col-sm-4 d-none d-sm-block">
                                             <div class="mx-md-4">
-                                                <img src="{{asset('dashlite/images/icons/id-front.svg')}}"
+                                                <img src="{{asset_url('dashlite/images/icons/id-front.svg')}}"
                                                      alt="ID Front">
                                             </div>
                                         </div>
                                     </div>
                                 </div><!-- nk-kycfm-upload -->
+                                <div class="kyc-upload-alert d-none">
+                                    <div class="alert alert-danger alert-icon">
+                                        <em class="icon ni ni-cross-circle"></em>
+                                        Please select KYC file.
+                                    </div>
+                                </div>
                             </div><!-- .nk-kycfm-content -->
                             <div class="nk-kycfm-footer">
                                 <form method="post" action="{{route('register-kyc-submit')}}" id="kycSubmitForm">
+                                    @csrf
                                     <div class="form-group">
                                         <div class="custom-control custom-control-xs custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="tc-agree" required>
+                                            <input type="checkbox" class="custom-control-input" id="tc-agree"
+                                                   name="tc-agree" required>
                                             <label class="custom-control-label" for="tc-agree">I Have Read The <a
                                                     href="#">Terms
                                                     Of Condition</a> And <a href="#">Privacy Policy</a></label>
@@ -116,13 +124,20 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="custom-control custom-control-xs custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="info-assure" required>
+                                            <input type="checkbox" class="custom-control-input" id="info-assure"
+                                                   name="info-assure" required>
                                             <label class="custom-control-label" for="info-assure">All The Personal
                                                 Information I Have Entered Is Correct.</label>
                                         </div>
                                     </div>
+                                    <div class="kyc-agree-alert d-none">
+                                        <div class="alert alert-danger alert-icon">
+                                            <em class="icon ni ni-cross-circle"></em>
+                                            Please read term and policy and confirm your personal information.
+                                        </div>
+                                    </div>
                                     <div class="nk-kycfm-action pt-2">
-                                        <button type="submit" class="btn btn-lg btn-primary">Process for Verify</button>
+                                        <button type="submit" class="btn btn-lg btn-primary" id="kycSubmitBtn">Process for Verify</button>
                                     </div>
                                 </form>
                             </div><!-- .nk-kycfm-footer -->
@@ -134,5 +149,5 @@
     </div>
 @endsection
 @section('script')
-    <script src="{{asset('assets/js/kyc-verify.js')}}"></script>
+    <script src="{{asset_url('assets/js/kyc-verify.js')}}"></script>
 @endsection

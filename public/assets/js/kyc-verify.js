@@ -30,7 +30,6 @@
                 acceptedFiles: ".jpeg,.jpg,.png,.gif",
                 addRemoveLinks: true,
                 maxFilesize: 8,
-                autoProcessQueue: false,
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
@@ -63,14 +62,14 @@
                 },
             });
     };
-    $('#kycSubmitForm').on('submit', function () {
+    $('#kycSubmitBtn').on('click', function () {
         event.preventDefault();
         if(!kycUpload.getAcceptedFiles().length){
-
+            $('.kyc-upload-alert').removeClass('d-none');
+        }else if(!$('#tc-agree').is(':checked')||!$('#info-assure').is(':checked')){
+            $('.kyc-agree-alert').removeClass('d-none');
         }else{
-            for (var i = 0; i < kycUpload.getAcceptedFiles().length; i++) {
-                kycUpload.processFile(kycUpload.getAcceptedFiles()[i]);
-            }
+            $('#kycSubmitForm').submit();
         }
     })
 

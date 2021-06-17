@@ -103,28 +103,28 @@
                             <ul class="language-list">
                                 <li>
                                     <a href="#" class="language-item">
-                                        <img src="{{asset('dashlite/images/flags/english.png')}}" alt=""
+                                        <img src="{{asset_url('dashlite/images/flags/english.png')}}" alt=""
                                              class="language-flag">
                                         <span class="language-name">English</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="language-item">
-                                        <img src="{{asset('dashlite/images/flags/spanish.png')}}" alt=""
+                                        <img src="{{asset_url('dashlite/images/flags/spanish.png')}}" alt=""
                                              class="language-flag">
                                         <span class="language-name">Español</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="language-item">
-                                        <img src="{{asset('dashlite/images/flags/spanish.png')}}" alt=""
+                                        <img src="{{asset_url('dashlite/images/flags/spanish.png')}}" alt=""
                                              class="language-flag">
                                         <span class="language-name">Français</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="language-item">
-                                        <img src="{{asset('dashlite/images/flags/turkey.png')}}" alt=""
+                                        <img src="{{asset_url('dashlite/images/flags/turkey.png')}}" alt=""
                                              class="language-flag">
                                         <span class="language-name">Türkçe</span>
                                     </a>
@@ -137,7 +137,7 @@
                     <div class="dropup">
                         <a href="#" class="dropdown-indicator has-indicator" data-toggle="dropdown" data-offset="0,10">
                             <span class="nk-menu-icon"><img
-                                    src="{{asset('assets/img/currency/icons8-us-dollar-48.png')}}" alt=""
+                                    src="{{asset_url('assets/img/currency/icons8-us-dollar-48.png')}}" alt=""
                                     class="language-flag"></span>
                             <span class="nk-menu-text d-none d-lg-inline">Dollar</span>
                         </a>
@@ -145,28 +145,28 @@
                             <ul class="language-list">
                                 <li>
                                     <a href="#" class="language-item">
-                                        <img src="{{asset('assets/img/currency/icons8-us-dollar-48.png')}}" alt=""
+                                        <img src="{{asset_url('assets/img/currency/icons8-us-dollar-48.png')}}" alt=""
                                              class="language-flag">
                                         <span class="language-name">US Dollar</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="language-item">
-                                        <img src="{{asset('assets/img/currency/icons8-euro-48.png')}}" alt=""
+                                        <img src="{{asset_url('assets/img/currency/icons8-euro-48.png')}}" alt=""
                                              class="language-flag">
                                         <span class="language-name">EURO</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="language-item">
-                                        <img src="{{asset('assets/img/currency/icons8-british-pound-48.png')}}" alt=""
+                                        <img src="{{asset_url('assets/img/currency/icons8-british-pound-48.png')}}" alt=""
                                              class="language-flag">
                                         <span class="language-name">GBP</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="language-item">
-                                        <img src="{{asset('assets/img/currency/malaysian-ringgit-malaysia.png')}}"
+                                        <img src="{{asset_url('assets/img/currency/malaysian-ringgit-malaysia.png')}}"
                                              alt=""
                                              class="language-flag">
                                         <span class="language-name">Ringgit</span>
@@ -192,7 +192,7 @@
                         <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
                             <div class="user-card">
                                 <div class="user-avatar">
-                                    <img src="{{asset('dashlite/images/avatar/blank.png')}}"/>
+                                    <img src="{{asset_url('dashlite/images/avatar/blank.png')}}"/>
                                 </div>
                                 <div class="user-info">
                                     <span class="lead-text">{{Auth::user()->name}}</span>

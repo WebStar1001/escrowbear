@@ -12,9 +12,9 @@
 
     <!-- Scripts -->
     <!-- Styles -->
-    <link rel="stylesheet" href="{{asset('dashlite/assets/css/dashlite.css?ver=2.2.0')}}">
-    <link id="skin-default" rel="stylesheet" href="{{asset('dashlite/assets/css/theme.css?ver=2.2.0')}}">
-    <link id="skin-default" rel="stylesheet" href="{{asset('assets/css/custom.css?ver=2.2.0')}}">
+    <link rel="stylesheet" href="{{asset_url('dashlite/assets/css/dashlite.css?ver=2.2.0')}}">
+    <link id="skin-default" rel="stylesheet" href="{{asset_url('dashlite/assets/css/theme.css?ver=2.2.0')}}">
+    <link id="skin-default" rel="stylesheet" href="{{asset_url('assets/css/custom.css?ver=2.2.0')}}">
     @yield('style')
 </head>
 <body class="nk-body npc-crypto bg-white has-sidebar no-touch nk-nio-theme">
@@ -39,8 +39,8 @@
             </div>
         </div>
     </div>
-    <script src="{{asset('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
-    <script src="{{asset('dashlite/assets/js/scripts.js?ver=2.2.0')}}"></script>
+    <script src="{{asset_url('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
+    <script src="{{asset_url('dashlite/assets/js/scripts.js?ver=2.2.0')}}"></script>
     @yield('script')
 </div>
 @include('layouts/partical/chatbot')

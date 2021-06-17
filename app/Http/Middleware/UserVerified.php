@@ -11,23 +11,22 @@ class UserVerified
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure $next
      * @return mixed
      */
     public function handle(Request $request, Closure $next)
     {
-        if( Auth::check() )
-        {
-            if ( Auth::user()->isUser() ) {
-                if(!Auth::user()->google2fa_enable||!Auth::user()->profile_path||Auth::user()->kycVerification){
+        if (Auth::check()) {
+            if (Auth::user()->isUser()) {
+                if (!Auth::user()->google2fa_enable || !Auth::user()->profile_path || Auth::user()->kycVerification) {
                     return redirect(route('welcome'));
                 }
-            }else{
-//                if(!Auth::user()->google2fa_enable||!Auth::user()->profile_path||Auth::user()->kycVerification){
-//                    return redirect(route('welcome'));
-//                }
-                return $next($request);
+            } else {
+                if (!Auth::user()->google2fa_enable || !Auth::user()->profile_path || Auth::user()->kycVerification) {
+                    return redirect(route('welcome'));
+                }
+//                return $next($request);
             }
 
         }

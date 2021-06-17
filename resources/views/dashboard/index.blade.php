@@ -27,7 +27,7 @@
                                     <div class="col-md-5 col-12">
                                         <div class="card card-bordered">
                                             <div class="card-inner">
-                                                <img src="{{asset('assets/img/btc-animation.jpg')}}"
+                                                <img src="{{asset_url('assets/img/btc-animation.jpg')}}"
                                                      style="width: 100%;height:90px;"/>
                                             </div>
                                         </div>
@@ -104,7 +104,7 @@
                                                                 <div class="">
                                                                     <span class="border-0">
                                                                         <img
-                                                                            src="{{asset('assets/img/currency/icons8-us-dollar-48.png')}}">
+                                                                            src="{{asset_url('assets/img/currency/icons8-us-dollar-48.png')}}">
                                                                         USD
                                                                     </span>
                                                                 </div>
@@ -191,7 +191,7 @@
                                                                 <div class="">
                                                                     <span class="border-0">
                                                                         <img
-                                                                            src="{{asset('assets/img/currency/icons8-us-dollar-48.png')}}">
+                                                                            src="{{asset_url('assets/img/currency/icons8-us-dollar-48.png')}}">
                                                                         USD
                                                                     </span>
                                                                 </div>
@@ -282,7 +282,7 @@
                                                                 <div class="">
                                                                     <span class="border-0">
                                                                         <img
-                                                                            src="{{asset('assets/img/currency/icons8-us-dollar-48.png')}}">
+                                                                            src="{{asset_url('assets/img/currency/icons8-us-dollar-48.png')}}">
                                                                         USD
                                                                     </span>
                                                                 </div>
@@ -373,7 +373,7 @@
                                                                 <div class="">
                                                                     <span class="border-0">
                                                                         <img
-                                                                            src="{{asset('assets/img/currency/icons8-us-dollar-48.png')}}">
+                                                                            src="{{asset_url('assets/img/currency/icons8-us-dollar-48.png')}}">
                                                                         USD
                                                                     </span>
                                                                 </div>
@@ -435,5 +435,5 @@
     </div>
 @endsection
 @section('script')
-    <script src="{{asset('assets/js/dashboard.js?ver=2.2.0')}}"></script>
+    <script src="{{asset_url('assets/js/dashboard.js?ver=2.2.0')}}"></script>
 @endsection

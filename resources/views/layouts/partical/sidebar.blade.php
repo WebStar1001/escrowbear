@@ -18,7 +18,7 @@
                 <div class="user-card user-card-s2">
                     @if(Auth::user()->profile_path == '')
                         <div class="user-avatar xl bg-primary">
-                            <img src="{{asset('dashlite/images/avatar/blank.png')}}"/>
+                            <img src="{{asset_url('dashlite/images/avatar/blank.png')}}"/>
                             <div class="status dot dot-lg dot-success"></div>
                         </div>
                     @else
@@ -46,7 +46,7 @@
                         <div class="user-card">
                             @if(Auth::user()->profile_path == '')
                                 <div class="user-avatar lg bg-primary">
-                                    <img src="{{asset('dashlite/images/avatar/blank.png')}}"/>
+                                    <img src="{{asset_url('dashlite/images/avatar/blank.png')}}"/>
                                     <div class="status dot dot-lg dot-success"></div>
                                 </div>
                             @else

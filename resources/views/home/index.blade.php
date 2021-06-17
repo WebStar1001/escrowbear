@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EscrowBear</title>
     <meta name="description" content="Escrow website for Crypto Currency">
-    <link rel="stylesheet" href="{{asset('dashlite/assets/css/dashlite.css?ver=2.2.0')}}">
-    <link id="skin-default" rel="stylesheet" href="{{asset('dashlite/assets/css/theme.css?ver=2.2.0')}}">
-    <link id="skin-default" rel="stylesheet" href="{{asset('assets/css/custom.css?ver=2.2.0')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/home.css')}}">
+    <link rel="stylesheet" href="{{asset_url('dashlite/assets/css/dashlite.css?ver=2.2.0')}}">
+    <link id="skin-default" rel="stylesheet" href="{{asset_url('dashlite/assets/css/theme.css?ver=2.2.0')}}">
+    <link id="skin-default" rel="stylesheet" href="{{asset_url('assets/css/custom.css?ver=2.2.0')}}">
+    <link rel="stylesheet" href="{{asset_url('assets/css/home.css')}}">
 </head>
 <body style="background-color: white;">
 @include('home.header')
@@ -17,7 +17,7 @@
     <div>
         <p class="title">
             Earth's only HyperEscrow for Crypto Currency
-            <img src="{{asset('assets/img/home/bow.png')}}" class="bow"/>
+            <img src="{{asset_url('assets/img/home/bow.png')}}" class="bow"/>
         </p>
         <p class="description">
             EscrowBear is a Unicorn Escrow Service for Bulk OTC P2P transactions. Built on proof of concept,
@@ -28,26 +28,26 @@
         <button data-toggle="modal" data-target="#getInvitedModal">Get Invited</button>
     </div>
     <div class="types">
-        <img src="{{asset('assets/img/home/type-1.png')}}" class="type-1"/>
-        <img src="{{asset('assets/img/home/type-2.png')}}" class="type-2"/>
-        <img src="{{asset('assets/img/home/type-3.png')}}" class="type-3"/>
-        <img src="{{asset('assets/img/home/type-4.png')}}" class="type-4"/>
-        <img src="{{asset('assets/img/home/type-5.png')}}" class="type-5"/>
-        <img src="{{asset('assets/img/home/type-6.png')}}" class="type-6"/>
-        <img src="{{asset('assets/img/home/type-7.png')}}" class="type-7"/>
+        <img src="{{asset_url('assets/img/home/type-1.png')}}" class="type-1"/>
+        <img src="{{asset_url('assets/img/home/type-2.png')}}" class="type-2"/>
+        <img src="{{asset_url('assets/img/home/type-3.png')}}" class="type-3"/>
+        <img src="{{asset_url('assets/img/home/type-4.png')}}" class="type-4"/>
+        <img src="{{asset_url('assets/img/home/type-5.png')}}" class="type-5"/>
+        <img src="{{asset_url('assets/img/home/type-6.png')}}" class="type-6"/>
+        <img src="{{asset_url('assets/img/home/type-7.png')}}" class="type-7"/>
     </div>
     <div>
-        <img src="{{asset('assets/img/home/banner-1.png')}}" alt="">
+        <img src="{{asset_url('assets/img/home/banner-1.png')}}" alt="">
     </div>
 </div>
 
 <div class="hyperescrow">
-    <img src="{{asset('assets/img/home/bg.png')}}" class="bg"/>
+    <img src="{{asset_url('assets/img/home/bg.png')}}" class="bg"/>
 
     <div class="container">
         <div class="main">
             <div>
-                <img src="{{asset('assets/img/home/banner-2.png')}}" alt="">
+                <img src="{{asset_url('assets/img/home/banner-2.png')}}" alt="">
             </div>
             <div>
                 <p class="title">
@@ -66,7 +66,7 @@
         <div class="list3box">
             <ul>
                 <li>
-                    <img src="{{asset('assets/img/home/3box-1.png')}}" alt="" class="logo">
+                    <img src="{{asset_url('assets/img/home/3box-1.png')}}" alt="" class="logo">
                     <p class="title">Lowest Fees</p>
                     <p class="description">
                         EscrowBear charges 0.3% for Escrows under 5000 BTC Equivalent and 0.1% for Escrows over 5000
@@ -78,7 +78,7 @@
                     </p>
                 </li>
                 <li>
-                    <img src="{{asset('assets/img/home/3box-2.png')}}" alt="" class="logo">
+                    <img src="{{asset_url('assets/img/home/3box-2.png')}}" alt="" class="logo">
                     <p class="title">Transparent Ledgers</p>
                     <p class="description">
                         All Institutionalised OTC Crypto Batches are only approved after KYC, AML and 18 other Due
@@ -90,7 +90,7 @@
                     </p>
                 </li>
                 <li>
-                    <img src="{{asset('assets/img/home/3box-3.png')}}" alt="" class="logo">
+                    <img src="{{asset_url('assets/img/home/3box-3.png')}}" alt="" class="logo">
                     <p class="title">No More Scams</p>
                     <p class="description">
                         With HyperEscrow commandAI, smart protocols are auto executed without manual interventions. Our
@@ -110,37 +110,37 @@
 <div class="banking_partners">
     <p class="title">Banking Partners</p>
     <div>
-        <img src="{{asset('assets/img/home/safra.png')}}"/>
-        <img src="{{asset('assets/img/home/ubs.png')}}"/>
+        <img src="{{asset_url('assets/img/home/safra.png')}}"/>
+        <img src="{{asset_url('assets/img/home/ubs.png')}}"/>
     </div>
     <div>
         <div class="item">
             <p class="title">Technology Partners</p>
-            <img src="{{asset('assets/img/home/metamask.png')}}" alt="">
+            <img src="{{asset_url('assets/img/home/metamask.png')}}" alt="">
         </div>
         <div class="item">
             <p class="title">AI Due Diligence Partner</p>
-            <img src="{{asset('assets/img/home/refinitiv.png')}}" alt="">
+            <img src="{{asset_url('assets/img/home/refinitiv.png')}}" alt="">
         </div>
     </div>
     <div>
         <p class="title">Media Partners</p>
         <div>
-            <img src="{{asset('assets/img/home/marketwatch.png')}}" alt="">
-            <img src="{{asset('assets/img/home/bitinfocharts.png')}}" alt="">
+            <img src="{{asset_url('assets/img/home/marketwatch.png')}}" alt="">
+            <img src="{{asset_url('assets/img/home/bitinfocharts.png')}}" alt="">
         </div>
     </div>
 </div>
 
 <div class="howcan">
     <div class="types">
-        <img src="{{asset('assets/img/home/type-1.png')}}" class="type-1"/>
-        <img src="{{asset('assets/img/home/type-2.png')}}" class="type-2"/>
-        <img src="{{asset('assets/img/home/type-3.png')}}" class="type-3"/>
-        <img src="{{asset('assets/img/home/type-4.png')}}" class="type-4"/>
-        <img src="{{asset('assets/img/home/type-5.png')}}" class="type-5"/>
-        <img src="{{asset('assets/img/home/type-6.png')}}" class="type-6"/>
-        <img src="{{asset('assets/img/home/type-7.png')}}" class="type-7"/>
+        <img src="{{asset_url('assets/img/home/type-1.png')}}" class="type-1"/>
+        <img src="{{asset_url('assets/img/home/type-2.png')}}" class="type-2"/>
+        <img src="{{asset_url('assets/img/home/type-3.png')}}" class="type-3"/>
+        <img src="{{asset_url('assets/img/home/type-4.png')}}" class="type-4"/>
+        <img src="{{asset_url('assets/img/home/type-5.png')}}" class="type-5"/>
+        <img src="{{asset_url('assets/img/home/type-6.png')}}" class="type-6"/>
+        <img src="{{asset_url('assets/img/home/type-7.png')}}" class="type-7"/>
     </div>
     <div class="container">
         <div class="content">
@@ -169,7 +169,7 @@
             </p>
         </div>
         <div>
-            <img src="{{asset('assets/img/home/howcan.png')}}" alt="">
+            <img src="{{asset_url('assets/img/home/howcan.png')}}" alt="">
         </div>
     </div>
 </div>
@@ -177,10 +177,10 @@
 <div class="transact">
     <div class="container">
         <div>
-            <img src="{{asset('assets/img/home/transact.png')}}" alt="">
+            <img src="{{asset_url('assets/img/home/transact.png')}}" alt="">
         </div>
         <div class="content">
-            <img src="{{asset('assets/img/home/bow.png')}}" alt="" class="bow">
+            <img src="{{asset_url('assets/img/home/bow.png')}}" alt="" class="bow">
             <p class="title">
                 Transact Safely With Our HyperEscrow Pilot
             </p>
@@ -193,14 +193,14 @@
                 process.
             </p>
 
-            <img src="{{asset('assets/img/home/dots.png')}}" alt="" class="dots">
+            <img src="{{asset_url('assets/img/home/dots.png')}}" alt="" class="dots">
         </div>
     </div>
 </div>
 
 <div class="faq">
     <div class="dots">
-        <img src="{{asset('assets/img/home/dots.png')}}"/>
+        <img src="{{asset_url('assets/img/home/dots.png')}}"/>
     </div>
     <div class="content">
         <p class="title">Getting Started at EscrowBear</p>
@@ -208,7 +208,7 @@
             <div class="faq-item">
                 <div class="header">
                     <span>Get Invited at EscrowBear</span>
-                    <img src="{{asset('assets/img/home/icons/blue-caret.svg')}}"/>
+                    <img src="{{asset_url('assets/img/home/icons/blue-caret.svg')}}"/>
                 </div>
                 <div class="body">
                     We made the Invitation process easy. Click on Get Invited and enter your details. EscrowBear will
@@ -221,7 +221,7 @@
             <div class="faq-item">
                 <div class="header">
                     <span>Consent to KYC Whitepaper and AML Regulatory Standards</span>
-                    <img src="{{asset('assets/img/home/icons/blue-caret.svg')}}"/>
+                    <img src="{{asset_url('assets/img/home/icons/blue-caret.svg')}}"/>
                 </div>
                 <div class="body">
                     After SignUp, proceed to eSign the KYC/AML whitepaper. Then Proceed to send an invte to the
@@ -234,7 +234,7 @@
             <div class="faq-item">
                 <div class="header">
                     <span>Agree and Act Upon Terms</span>
-                    <img src="{{asset('assets/img/home/icons/blue-caret.svg')}}"/>
+                    <img src="{{asset_url('assets/img/home/icons/blue-caret.svg')}}"/>
                 </div>
                 <div class="body">
                     After the second party joins the transaction, botoh parties will need to agree on the terms.
@@ -248,7 +248,7 @@
             <div class="faq-item">
                 <div class="header">
                     <span>Retro Inspect Cash and Crypto- Funds Released</span>
-                    <img src="{{asset('assets/img/home/icons/blue-caret.svg')}}"/>
+                    <img src="{{asset_url('assets/img/home/icons/blue-caret.svg')}}"/>
                 </div>
                 <div class="body">
                     After all the terms have been met, the funds are ready to be released, completing the transaction.
@@ -259,15 +259,15 @@
         </div>
     </div>
     <div class="image">
-        <img src="{{asset('assets/img/home/faq.png')}}"/>
+        <img src="{{asset_url('assets/img/home/faq.png')}}"/>
     </div>
 </div>
 
 <div class="stay">
-    <img src="{{asset('assets/img/home/sponsor.png')}}" alt="" class="sponsors">
+    <img src="{{asset_url('assets/img/home/sponsor.png')}}" alt="" class="sponsors">
     <div>
         <div class="image">
-            <img src="{{asset('assets/img/home/stay.png')}}"/>
+            <img src="{{asset_url('assets/img/home/stay.png')}}"/>
         </div>
         <div class="content">
             <p class="title">
@@ -287,18 +287,18 @@
 <div class="sponsor">
     <p class="title">EscrowBear Partnering Institutions</p>
     <div>
-        <img src="{{asset('assets/img/home/TUD.png')}}"/>
-        <img src="{{asset('assets/img/home/RUT.png')}}"/>
-        <img src="{{asset('assets/img/home/UPC.png')}}"/>
-        <img src="{{asset('assets/img/home/CUT.png')}}"/>
+        <img src="{{asset_url('assets/img/home/TUD.png')}}"/>
+        <img src="{{asset_url('assets/img/home/RUT.png')}}"/>
+        <img src="{{asset_url('assets/img/home/UPC.png')}}"/>
+        <img src="{{asset_url('assets/img/home/CUT.png')}}"/>
     </div>
 </div>
 
 <div class="about">
-    <img src="{{asset('assets/img/home/bg-2.png')}}" class="bg"/>
+    <img src="{{asset_url('assets/img/home/bg-2.png')}}" class="bg"/>
     <div>
-        <img src="{{asset('assets/img/home/desktop.png')}}"/>
-        <img src="{{asset('assets/img/home/mobile.png')}}"/>
+        <img src="{{asset_url('assets/img/home/desktop.png')}}"/>
+        <img src="{{asset_url('assets/img/home/mobile.png')}}"/>
     </div>
 </div>
 
@@ -307,22 +307,22 @@
         <div class="list">
             <p class="title">crypto friendly</p>
             <ul>
-                <li><img src="{{asset('assets/img/home/bitcoin.png')}}"/></li>
-                <li><img src="{{asset('assets/img/home/ether.png')}}"/></li>
-                <li><img src="{{asset('assets/img/home/ripple.png')}}"/></li>
-                <li><img src="{{asset('assets/img/home/tether.png')}}"/></li>
+                <li><img src="{{asset_url('assets/img/home/bitcoin.png')}}"/></li>
+                <li><img src="{{asset_url('assets/img/home/ether.png')}}"/></li>
+                <li><img src="{{asset_url('assets/img/home/ripple.png')}}"/></li>
+                <li><img src="{{asset_url('assets/img/home/tether.png')}}"/></li>
             </ul>
         </div>
-        <img src="{{asset('assets/img/home/qrcode.png')}}" alt="">
+        <img src="{{asset_url('assets/img/home/qrcode.png')}}" alt="">
     </div>
     <div class="supported_by">
-        <img src="{{asset('assets/img/home/keepkey.png')}}" alt="" class="keepkey">
+        <img src="{{asset_url('assets/img/home/keepkey.png')}}" alt="" class="keepkey">
         <div>
             <p class="title">Supported by</p>
-            <img src="{{asset('assets/img/home/trezor.png')}}"/>
-            <img src="{{asset('assets/img/home/ledger.png')}}"/>
+            <img src="{{asset_url('assets/img/home/trezor.png')}}"/>
+            <img src="{{asset_url('assets/img/home/ledger.png')}}"/>
         </div>
-        <img src="{{asset('assets/img/home/covid.png')}}" class="covid"/>
+        <img src="{{asset_url('assets/img/home/covid.png')}}" class="covid"/>
     </div>
 </div>
 @include('home.footer')
@@ -353,8 +353,8 @@
     </div>
 </div>
 </body>
-<script src="{{asset('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
-<script src="{{asset('dashlite/assets/js/scripts.js?ver=2.2.0')}}"></script>
+<script src="{{asset_url('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
+<script src="{{asset_url('dashlite/assets/js/scripts.js?ver=2.2.0')}}"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199462509-1">
 </script>

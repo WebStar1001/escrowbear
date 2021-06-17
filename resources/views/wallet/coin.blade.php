@@ -167,5 +167,5 @@
     <script type="text/javascript"
             src="https://github.com/nagix/chartjs-plugin-streaming/releases/download/v1.1.0/chartjs-plugin-streaming.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pusher/4.1.0/pusher.js"></script>
-    <script src="{{asset('assets/js/wallet.js?ver=2.2.0')}}"></script>
+    <script src="{{asset_url('assets/js/wallet.js?ver=2.2.0')}}"></script>
 @endsection

@@ -47,7 +47,7 @@ class LoginController extends Controller
             'last_login_ip' => $request->getClientIp()
         ]);
         if($user->isAdmin()) {
-            return redirect(route('admin_dashboard'));
+            return redirect(route('dashboard'));
         }
 
         // to user dashboard

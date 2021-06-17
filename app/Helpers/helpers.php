@@ -9,6 +9,9 @@ if (!function_exists('profile_path')) {
         return asset('storage/profile/' . $path);
     }
 
+
+}
+if(!function_exists('is_verified')){
     function is_verified()
     {
         if (Auth::check()) {
@@ -23,5 +26,10 @@ if (!function_exists('profile_path')) {
         }
         return false;
     }
-
+}
+if(!function_exists('asset_url')){
+    function asset_url($path)
+    {
+        return asset('public/' . $path);
+    }
 }
