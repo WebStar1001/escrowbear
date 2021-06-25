@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \CoinMarketCapApi;
+use App\Models\Wallet;
+use Illuminate\Support\Facades\Auth;
 
 class WalletController extends Controller
 {
@@ -25,8 +27,11 @@ class WalletController extends Controller
      */
     public function index()
     {
-
-        return view('wallet/index');
+        $user = Auth::user();
+        $wallets = Wallet::where('user_id', $user->id)
+            ->orderby('balance')->get();
+        return view('wallet/index')
+            ->with('wallets', $wallets);
     }
 
     public function coinWallet(Request $request)

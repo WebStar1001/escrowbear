@@ -8,6 +8,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <link rel="shortcut icon" href="{{asset_url('favicon.ico')}}">
+
     <meta name="description" content="Escrow website for Crypto Currency">
 
     <!-- Scripts -->
@@ -45,4 +48,14 @@
 </div>
 @include('layouts/partical/chatbot')
 </body>
+<script type="text/javascript">
+    $('#currencySelector li a').click(function () {
+        $('#currencySelector .nk-menu-icon img').attr('src', $(this).find('img').attr('src'));
+        $('#currencySelector .nk-menu-text').text($(this).find('span').text());
+    });
+    $('#languageSelector li a').click(function () {
+        $('#languageSelector .nk-menu-icon img').attr('src', $(this).find('img').attr('src'));
+        $('#languageSelector .nk-menu-text').text($(this).find('span').text());
+    });
+</script>
 </html>

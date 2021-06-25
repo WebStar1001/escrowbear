@@ -9,6 +9,8 @@
 
     <title>{{ config('app.name', 'EscrowBear') }}</title>
 
+    <link rel="shortcut icon" href="{{asset_url('favicon.ico')}}">
+
     <!-- Scripts -->
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset_url('dashlite/assets/css/dashlite.css?ver=2.2.0')}}">

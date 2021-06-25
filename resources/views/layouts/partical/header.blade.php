@@ -93,10 +93,12 @@
                         </div>
                     </div>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown" id="languageSelector">
                     <div class="dropup">
                         <a href="#" class="dropdown-indicator has-indicator" data-toggle="dropdown" data-offset="0,10">
-                            <span class="nk-menu-icon"><em class="icon ni ni-globe"></em></span>
+                            <span class="nk-menu-icon">
+                                <img src="{{asset_url('dashlite/images/flags/english.png')}}" alt=""
+                                     class="language-flag"/></span>
                             <span class="nk-menu-text d-none d-lg-inline">English</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
@@ -133,7 +135,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown" id="currencySelector">
                     <div class="dropup">
                         <a href="#" class="dropdown-indicator has-indicator" data-toggle="dropdown" data-offset="0,10">
                             <span class="nk-menu-icon"><img
@@ -159,7 +161,8 @@
                                 </li>
                                 <li>
                                     <a href="#" class="language-item">
-                                        <img src="{{asset_url('assets/img/currency/icons8-british-pound-48.png')}}" alt=""
+                                        <img src="{{asset_url('assets/img/currency/icons8-british-pound-48.png')}}"
+                                             alt=""
                                              class="language-flag">
                                         <span class="language-name">GBP</span>
                                     </a>
@@ -199,13 +202,6 @@
                                     <span class="sub-text">{{Auth::user()->email}}</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="dropdown-inner user-account-info">
-                            <h6 class="overline-title-alt">Nio Wallet Account</h6>
-                            <div class="user-balance">12.395769 <small class="currency currency-btc">BTC</small></div>
-                            <div class="user-balance-sub">Locked <span>0.344939 <span
-                                        class="currency currency-btc">BTC</span></span></div>
-                            <a href="#" class="link"><span>Withdraw Funds</span> <em class="icon ni ni-wallet-out"></em></a>
                         </div>
                         <div class="dropdown-inner">
                             <ul class="link-list">

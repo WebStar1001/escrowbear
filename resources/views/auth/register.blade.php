@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Escrowbear') }}</title>
+    <link rel="shortcut icon" href="{{asset_url('favicon.ico')}}">
 
     <!-- Scripts -->
     <!-- Styles -->
