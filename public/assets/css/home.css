@@ -12,11 +12,11 @@ body * {
 body button,
 body a {
   cursor: pointer;
-  outline: none!important;
+  outline: none !important;
 }
 
 body button:hover {
-  outline: none!important;
+  outline: none !important;
 }
 
 body p {
@@ -91,7 +91,7 @@ body header.opened #hamburger .normal {
 }
 
 body header .logo {
-  font-size: 38px;
+  font-size: 30px;
   font-weight: 700;
   color: #402495;
 }
@@ -302,11 +302,11 @@ body .hero > div:first-child {
 
 body .hero > div:first-child .title {
   position: relative;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 700;
   color: #2d437e;
-  line-height: 90px;
-  margin-bottom: 60px;
+  line-height: 60px;
+  margin-bottom: 40px;
 }
 
 body .hero > div:first-child .title .bow {
@@ -316,8 +316,8 @@ body .hero > div:first-child .title .bow {
 }
 
 body .hero > div:first-child .description {
-  font-size: 18px;
-  line-height: 34px;
+  font-size: 16px;
+  line-height: 30px;
   color: #2d437e;
   margin-bottom: 38px;
   padding-right: 120px;
@@ -377,15 +377,15 @@ body .hyperescrow .container .main > div:last-child {
 }
 
 body .hyperescrow .container .main > div:last-child .title {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   color: #2d437e;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 body .hyperescrow .container .main > div:last-child .description {
-  font-size: 18px;
-  line-height: 34px;
+  font-size: 16px;
+  line-height: 30px;
   color: #2d437e;
 }
 
@@ -430,8 +430,8 @@ body .hyperescrow .container .list3box ul li .title {
 }
 
 body .hyperescrow .container .list3box ul li .description {
-  font-size: 18px;
-  line-height: 34px;
+  font-size: 16px;
+  line-height: 30px;
   color: #2d437e;
 }
 
@@ -621,24 +621,24 @@ body .howcan .container {
 }
 
 body .howcan .container .content .title {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
   color: #2d437e;
-  line-height: 66px;
-  margin-bottom: 50px;
+  line-height: 50px;
+  margin-bottom: 30px;
 }
 
 body .howcan .container .content .subtitle {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 600;
-  line-height: 45px;
+  line-height: 40px;
   color: #2d437e;
   margin-bottom: 35px;
 }
 
 body .howcan .container .content .description {
-  font-size: 18px;
-  line-height: 37px;
+  font-size: 16px;
+  line-height: 30px;
   color: #2d437e;
 }
 
@@ -708,14 +708,14 @@ body .transact .container .content .bow {
 body .transact .container .content .title {
   font-size: 36px;
   font-weight: 600;
-  line-height: 66px;
-  margin-bottom: 40px;
+  line-height: 45px;
+  margin-bottom: 30px;
   color: #2d437e;
 }
 
 body .transact .container .content .description {
-  font-size: 18px;
-  line-height: 34px;
+  font-size: 16px;
+  line-height: 30px;
   color: #2d437e;
 }
 
@@ -748,10 +748,10 @@ body .faq .content {
 }
 
 body .faq .content .title {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
   color: #483f85;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 body .faq .content .items .faq-item {
@@ -805,8 +805,8 @@ body .faq .content .items .faq-item .body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   margin-bottom: 30px;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 30px;
   color: #2d437e;
 }
 
@@ -866,11 +866,11 @@ body .stay > div .content {
 }
 
 body .stay > div .content .title {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 66px;
+  line-height: 50px;
   color: #2d437e;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 body .stay > div .content .title a {
@@ -879,8 +879,8 @@ body .stay > div .content .title a {
 }
 
 body .stay > div .content .description {
-  font-size: 18px;
-  line-height: 34px;
+  font-size: 16px;
+  line-height: 30px;
   color: #2d437e;
 }
 
@@ -910,9 +910,9 @@ body .sponsor {
 }
 
 body .sponsor .title {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
   color: #fff;
   opacity: 0.8;
 }
@@ -1055,7 +1055,7 @@ body .avatars > div.supported_by .covid {
 }
 
 body footer {
-  padding: 30px 45px 110px;
+  padding: 30px 45px 30px;
   background: #1e2e5a;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1179,8 +1179,8 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     color: #2d437e;
   }
   body .transact .container .content .description {
-    font-size: 18px;
-    line-height: 34px;
+    font-size: 16px;
+    line-height: 30px;
     color: #2d437e;
   }
   body .transact .container .content .dots {
@@ -1279,7 +1279,7 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     margin: 0 40px;
   }
   body .hero > div:first-child .title {
-    font-size: 45px;
+    font-size: 40px;
     line-height: 60px;
     margin-bottom: 40px;
   }
@@ -1397,7 +1397,7 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     justify-content: center;
   }
   body footer {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
   body footer .copyright {
     margin-left: 25px;
@@ -1679,6 +1679,7 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
     display: block;
   }
   body .hero {
+    margin-top: 57px;
     padding-bottom: 72px;
   }
   body .hero > div:first-child {
@@ -1885,3 +1886,37 @@ body footer .contact_info .detail_info .whatsapp_info div .description {
   }
 }
 /*# sourceMappingURL=index.css.map */
+
+
+/* animation */
+
+.slide-in-from-right {
+  animation: 1s ease-out 0s 1 slideInFromRight forwards;
+}
+
+.slide-in-from-left {
+  animation: 1s ease-out 0s 1 slideInFromLeft forwards;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

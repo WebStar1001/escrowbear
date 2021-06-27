@@ -38,7 +38,7 @@
         <img src="{{asset_url('assets/img/home/type-7.png')}}" class="type-7"/>
     </div>
     <div>
-        <img src="{{asset_url('assets/img/home/banner-1.png')}}" alt="">
+        <img src="{{asset_url('assets/img/home/banner-1.png')}}" class="animation right2left" alt="">
     </div>
 </div>
 
@@ -48,7 +48,7 @@
     <div class="container">
         <div class="main">
             <div>
-                <img src="{{asset_url('assets/img/home/banner-2.png')}}" alt="">
+                <img src="{{asset_url('assets/img/home/banner-2.png')}}" class="animation left2right" alt="">
             </div>
             <div>
                 <p class="title">
@@ -170,7 +170,7 @@
             </p>
         </div>
         <div>
-            <img src="{{asset_url('assets/img/home/howcan.png')}}" alt="">
+            <img src="{{asset_url('assets/img/home/howcan.png')}}" class="animation right2left" alt="">
         </div>
     </div>
 </div>
@@ -178,7 +178,7 @@
 <div class="transact">
     <div class="container">
         <div>
-            <img src="{{asset_url('assets/img/home/transact.png')}}" alt="">
+            <img src="{{asset_url('assets/img/home/transact.png')}}" class="animation left2right" alt="">
         </div>
         <div class="content">
             <img src="{{asset_url('assets/img/home/bow.png')}}" alt="" class="bow">
@@ -260,7 +260,7 @@
         </div>
     </div>
     <div class="image">
-        <img src="{{asset_url('assets/img/home/faq.png')}}"/>
+        <img src="{{asset_url('assets/img/home/faq.png')}}" class="animation right2left" />
     </div>
 </div>
 
@@ -268,7 +268,7 @@
     <img src="{{asset_url('assets/img/home/sponsor.png')}}" alt="" class="sponsors">
     <div>
         <div class="image">
-            <img src="{{asset_url('assets/img/home/stay.png')}}"/>
+            <img src="{{asset_url('assets/img/home/stay.png')}}" class="animation left2right" />
         </div>
         <div class="content">
             <p class="title">
@@ -298,8 +298,8 @@
 <div class="about">
     <img src="{{asset_url('assets/img/home/bg-2.png')}}" class="bg"/>
     <div>
-        <img src="{{asset_url('assets/img/home/desktop.png')}}"/>
-        <img src="{{asset_url('assets/img/home/mobile.png')}}"/>
+        <img src="{{asset_url('assets/img/home/desktop.png')}}" class="animation left2right" />
+        <img src="{{asset_url('assets/img/home/mobile.png')}}" class="animation right2left" />
     </div>
 </div>
 
@@ -356,6 +356,7 @@
 </body>
 <script src="{{asset_url('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
 <script src="{{asset_url('dashlite/assets/js/scripts.js?ver=2.2.0')}}"></script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199462509-1">
 </script>
@@ -391,7 +392,34 @@
         });
         $('#goToDashboardBtn').click(function () {
             window.location.href = 'dashboard';
-        })
+        });
+
+        // animation
+
+        // right to left
+        const options = { root: null, rootMargin: '0px', threshold: 1 }; 
+        const right2LeftAnimation = (entries, observer) => {
+            entries.forEach(entry => {
+                entry.target.classList.toggle("slide-in-from-right", entry.isIntersecting);
+            });
+        };
+        const right2Leftobserver = new IntersectionObserver(right2LeftAnimation);
+        const rightElements = document.querySelectorAll('.animation.right2left');
+        rightElements.forEach(el => {
+            right2Leftobserver.observe(el, options);
+        });
+
+        // left to right
+        const left2RightAnimation = (entries, observer) => {
+            entries.forEach(entry => {
+                entry.target.classList.toggle("slide-in-from-left", entry.isIntersecting);
+            });
+        };
+        const leftToRightobserver = new IntersectionObserver(left2RightAnimation);
+        const leftElements = document.querySelectorAll('.animation.left2right');
+        leftElements.forEach(el => {
+            leftToRightobserver.observe(el, options);
+        });
     });
 </script>
 </html>
