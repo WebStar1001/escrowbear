@@ -13,9 +13,7 @@
     <link rel="stylesheet" href="{{asset_url('assets/css/home.css?ver=2.2')}}">
 </head>
 <body style="background-color: white;">
-<div class="nk-app-root">
-    @include('home.header')
-</div>
+@include('home.header')
 <div class="hero">
     <div>
         <p class="title">
