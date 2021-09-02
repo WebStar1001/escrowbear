@@ -9,11 +9,13 @@
     <link rel="shortcut icon" href="{{asset_url('favicon.ico')}}">
     <link rel="stylesheet" href="{{asset_url('dashlite/assets/css/dashlite.css?ver=2.2.0')}}">
     <link id="skin-default" rel="stylesheet" href="{{asset_url('dashlite/assets/css/theme.css?ver=2.2.0')}}">
-    <link id="skin-default" rel="stylesheet" href="{{asset_url('assets/css/custom.css?ver=2.2.0')}}">
-    <link rel="stylesheet" href="{{asset_url('assets/css/home.css')}}">
+    <link id="skin-default" rel="stylesheet" href="{{asset_url('assets/css/custom.css?ver=2.3.0')}}">
+    <link rel="stylesheet" href="{{asset_url('assets/css/home.css?ver=2.2')}}">
 </head>
 <body style="background-color: white;">
-@include('home.header')
+<div class="nk-app-root">
+    @include('home.header')
+</div>
 <div class="hero">
     <div>
         <p class="title">
@@ -260,7 +262,7 @@
         </div>
     </div>
     <div class="image">
-        <img src="{{asset_url('assets/img/home/faq.png')}}" class="animation right2left" />
+        <img src="{{asset_url('assets/img/home/faq.png')}}" class="animation right2left"/>
     </div>
 </div>
 
@@ -268,7 +270,7 @@
     <img src="{{asset_url('assets/img/home/sponsor.png')}}" alt="" class="sponsors">
     <div>
         <div class="image">
-            <img src="{{asset_url('assets/img/home/stay.png')}}" class="animation left2right" />
+            <img src="{{asset_url('assets/img/home/stay.png')}}" class="animation left2right"/>
         </div>
         <div class="content">
             <p class="title">
@@ -298,8 +300,8 @@
 <div class="about">
     <img src="{{asset_url('assets/img/home/bg-2.png')}}" class="bg"/>
     <div>
-        <img src="{{asset_url('assets/img/home/desktop.png')}}" class="animation left2right" />
-        <img src="{{asset_url('assets/img/home/mobile.png')}}" class="animation right2left" />
+        <img src="{{asset_url('assets/img/home/desktop.png')}}" class="animation left2right"/>
+        <img src="{{asset_url('assets/img/home/mobile.png')}}" class="animation right2left"/>
     </div>
 </div>
 
@@ -349,7 +351,9 @@
                         <h3 class="form-label text-danger">Need more due diligence, User not in database</h3>
                     </div>
                     <div class="form-group text-right">
-                        <button type="submit" class="btn btn-lg btn-primary" id="inviteButton" disabled>Receive Invitation</button>
+                        <button type="submit" class="btn btn-lg btn-primary" id="inviteButton" disabled>Receive
+                            Invitation
+                        </button>
                     </div>
                 </form>
             </div>
@@ -399,7 +403,7 @@
         // animation
 
         // right to left
-        const options = { root: null, rootMargin: '0px', threshold: 1 };
+        const options = {root: null, rootMargin: '0px', threshold: 1};
         const right2LeftAnimation = (entries, observer) => {
             entries.forEach(entry => {
                 entry.target.classList.toggle("slide-in-from-right", entry.isIntersecting);

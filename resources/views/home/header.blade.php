@@ -2,7 +2,8 @@
     <div class="nk-header-wrap">
         <div class="flow-text">
             <div class="info-banner-text">Global Market Cap : <span class="text-success">$2,587,436,874</span></div>
-            <div class="info-banner-text">BTC Dominance : <span class="text-success">BTC: 42.2% ETH: 18.7%</span></div>
+            <div class="info-banner-text">BTC Dominance : <span class="text-success">BTC: 42.2% ETH: 18.7%</span>
+            </div>
             <div class="info-banner-text">24hr Volume : <span class="text-success">$273,838,238,220</span></div>
             <div class="info-banner-text">EscrowBear©Market : <span class="text-success">$3,585,663</span></div>
         </div>
