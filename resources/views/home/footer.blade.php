@@ -21,7 +21,7 @@
                         <p class="title">Operating Address</p>
                         <p class="description">
                             Kensington House, 69 Dr.Roy's Drive P.O, Box 2528. Grand Cayman
-                            <img src="{{asset_url('assets/img/home/cayman_island.png')}}"/>
+{{--                            <img src="{{asset_url('assets/img/home/cayman_island.png')}}"/>--}}
                             KY1-1104 Cayman Islands. British Overseas Territory.
                         </p>
                     </div>
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div class="footer_lang align-self-sm-center align-self-lg-start">
+    <div class="footer_lang align-self-sm-center align-self-lg-start mb-5">
         <div class="d-flex mb-3 mr-5 mb-md-0">
             <ul class="nk-quick-nav">
                 <li class="dropdown" id="languageSelector">
