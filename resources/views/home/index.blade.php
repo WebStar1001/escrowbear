@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{asset_url('assets/css/home.css?ver=2.2')}}">
 </head>
 <body style="background-color: white;">
-<div class="nk-header-fluid nk-header-fixed">
+<div class="nk-header-fluid d-xl-block d-none">
     @include('layouts/partical/infoheader')
 </div>
 @include('home.header')
