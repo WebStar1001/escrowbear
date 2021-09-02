@@ -1166,7 +1166,6 @@ body footer  .whatsapp_info div .title {
     font-weight: 500;
     color: #fff;
 }
-
 body footer  .whatsapp_info div .description {
     width: 100%;
     max-width: 275px;
@@ -1174,6 +1173,9 @@ body footer  .whatsapp_info div .description {
     font-size: 17px;
     font-weight: 500;
     color: rgb(133 149 181);
+}
+body footer .footer_lang{
+    font-size : 16px;
 }
 
 @media (max-width: 1600px) {
@@ -2045,6 +2047,9 @@ body footer  .whatsapp_info div .description {
 
     body footer > div:first-child .contact_info .quickly_link ul li a {
         font-size: 14px;
+    }
+    body footer .footer_lang{
+        font-size : 14px!important;
     }
 }
 
