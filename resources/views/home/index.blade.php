@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="{{asset_url('assets/css/home.css?ver=2.2')}}">
 </head>
 <body style="background-color: white;">
+<div class="nk-header-fluid nk-header-fixed">
+    @include('layouts/partical/infoheader')
+</div>
 @include('home.header')
 <div class="hero">
     <div>
@@ -26,6 +29,7 @@
             and white label anonymity, it is the only escrow you can trust for high value hyperledger embedded
             transfers.
         </p>
+
         <button data-toggle="modal" data-target="#getInvitedModal">Get Invited</button>
     </div>
     <div class="types">
@@ -58,7 +62,8 @@
                     The HyperEscrow Payment Mechanism is infinitely faster, tx-irreversible and truly regulatory
                     compliant,
                     offering our Buyers and Sellers peace of mind.<br><br>
-                    By harnessing the power of Keyloop Contracts, our advanced patented mechanism puts the control of
+                    By harnessing the power of Keyloop Contracts, our advanced patented mechanism puts the control
+                    of
                     coin and
                     fiat back into your hands.
                 </p>
@@ -72,7 +77,8 @@
                     <p class="description">
                         EscrowBear charges 0.3% for Escrows under 5000 BTC Equivalent and 0.1% for Escrows over 5000
                         BTC. Minimum
-                        Escrow of 300 BTC is required for the static capped fee. We do not offer magic discounts, or low
+                        Escrow of 300 BTC is required for the static capped fee. We do not offer magic discounts, or
+                        low
                         OTC
                         premium
                         but we charge what is fair. We are the gold standard.
@@ -85,7 +91,8 @@
                         All Institutionalised OTC Crypto Batches are only approved after KYC, AML and 18 other Due
                         Diligence
                         checks
-                        assuring that stringent measures are complied with. CRS checks with the OECD is done with every
+                        assuring that stringent measures are complied with. CRS checks with the OECD is done with
+                        every
                         quarter.
                         Also this is not compliant under any USA-SEC bodies for escrow monitoring.
                     </p>
@@ -94,7 +101,8 @@
                     <img src="{{asset_url('assets/img/home/3box-3.png')}}" alt="" class="logo">
                     <p class="title">No More Scams</p>
                     <p class="description">
-                        With HyperEscrow commandAI, smart protocols are auto executed without manual interventions. Our
+                        With HyperEscrow commandAI, smart protocols are auto executed without manual interventions.
+                        Our
                         AI
                         mechanism
                         detects when there is breach or dispute and terminates the process entirely whlist funds are
@@ -152,14 +160,18 @@
                 Protect your customers with the most secure online payment gateway.
             </p>
             <p class="description">
-                Whether it’s cryptocurrency deposits via the Ledger/ Hot wallet to blockchain , or bulk wire transfers
+                Whether it’s cryptocurrency deposits via the Ledger/ Hot wallet to blockchain , or bulk wire
+                transfers
                 to the
-                Swiss Banks, Whether you’re a small OTC marketplace or a private family office, we mind your business
+                Swiss Banks, Whether you’re a small OTC marketplace or a private family office, we mind your
+                business
                 and take
                 great interest in your convenience.<br><br>
 
-                EscrowBear is now used by premier Education Institutions, Private Family Trusts, Crypto Mining Farms and
-                NeoBanking Workstations complicit with thetadecimal hashpower to grow organisations and keep them ahead
+                EscrowBear is now used by premier Education Institutions, Private Family Trusts, Crypto Mining Farms
+                and
+                NeoBanking Workstations complicit with thetadecimal hashpower to grow organisations and keep them
+                ahead
                 of
                 curve.<br><br>
 
@@ -186,10 +198,12 @@
                 Transact Safely With Our HyperEscrow Pilot
             </p>
             <p class="description">
-                EscrowBear combines online HyperEscrow with redactive Machine Learning without manual interventions to
+                EscrowBear combines online HyperEscrow with redactive Machine Learning without manual interventions
+                to
                 provide
                 a
-                secure and efficient way to make peer-to-peer payments with strangers online or in person in a simple, 4
+                secure and efficient way to make peer-to-peer payments with strangers online or in person in a
+                simple, 4
                 Step
                 process.
             </p>
@@ -212,7 +226,8 @@
                     <img src="{{asset_url('assets/img/home/icons/blue-caret.svg')}}"/>
                 </div>
                 <div class="body">
-                    We made the Invitation process easy. Click on Get Invited and enter your details. EscrowBear will
+                    We made the Invitation process easy. Click on Get Invited and enter your details. EscrowBear
+                    will
                     send you
                     an Invitation Code for you to enter and resume SignUp. Fill your name, email and add a strong
                     password. The
@@ -241,7 +256,8 @@
                     After the second party joins the transaction, botoh parties will need to agree on the terms.
                     Once both parties accept terms and act upon, EscrowBear creates a hyper smart contract that will
                     manage the
-                    deposit from the Buyer and the crypto from the Seller throughout the transaction, ensuring the most
+                    deposit from the Buyer and the crypto from the Seller throughout the transaction, ensuring the
+                    most
                     secure
                     form of bulk escrow to date.
                 </div>
@@ -252,7 +268,8 @@
                     <img src="{{asset_url('assets/img/home/icons/blue-caret.svg')}}"/>
                 </div>
                 <div class="body">
-                    After all the terms have been met, the funds are ready to be released, completing the transaction.
+                    After all the terms have been met, the funds are ready to be released, completing the
+                    transaction.
                     Funds are
                     sent instantly and should be received in the designated wallet within minutes.
                 </div>
@@ -275,10 +292,12 @@
                 Stay in total control with our <a href="#">HyperEscrow</a> Transaction System
             </p>
             <p class="description">
-                EscrowBear’s proprietary HyperEscrow transaction system will never ask you for your private keys. Your
+                EscrowBear’s proprietary HyperEscrow transaction system will never ask you for your private keys.
+                Your
                 cryptocurrencies will be securely held on a publicly listed blockchain address within each block.
                 Keyless
-                escrow creates an unique tx loop data which is end to end encrypted, guarenteeing no one can access your
+                escrow creates an unique tx loop data which is end to end encrypted, guarenteeing no one can access
+                your
                 crypto, not even EscrowBear.
             </p>
         </div>
