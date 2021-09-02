@@ -24,8 +24,6 @@ body p {
 }
 
 body header {
-  position: fixed;
-  top: 0;
   width: 100%;
   z-index: 1000;
   background: #fff;
@@ -41,6 +39,7 @@ body header {
   -ms-flex-align: center;
   align-items: center;
   border-bottom: 1px solid #eae8e8;
+  border-top: 1px solid #eae8e8;
 }
 
 body header.opened .menu {
