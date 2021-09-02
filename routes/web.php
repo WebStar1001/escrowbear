@@ -27,8 +27,7 @@ Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])
     ->name('dashboard')
-    ->middleware(['auth', 'g2fa', 'verified'])
-;
+    ->middleware(['auth', 'g2fa', 'verified']);
 Route::get('/dashboard/welcome', [App\Http\Controllers\WelcomeController::class, 'index'])
     ->name('welcome')
     ->middleware(['auth', 'g2fa']);
@@ -95,3 +94,7 @@ Route::post('/register/kyc-submit', [App\Http\Controllers\WelcomeController::cla
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
 Route::match(['get', 'post'], '/botman', [App\Http\Controllers\BotManController::class, 'handle']);
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
+    Route::get('/', [App\Http\Controllers\Admin\UserManageController::class, 'index'])->name('admin_dashboard');
+});

@@ -33,7 +33,7 @@
                         <span class="sub-text">{{Auth::user()->email}}</span>
                     </div>
                 </div>
-                @if(is_verified())
+                @if(is_verified() && Auth()->user()->isUser())
                     <div class="d-flex">
                         <a href="#" class="btn btn-sm btn-primary">Create Escrow</a>
                         <a href="#" class="btn btn-sm btn-success ml-2">Accept Escrow</a>
@@ -63,10 +63,12 @@
                         </div>
                     </div>
                 </a>
-                <div class="d-flex mt-2">
-                    <a href="#" class="btn btn-sm btn-primary">Create Escrow</a>
-                    <a href="#" class="btn btn-sm btn-success ml-1">Accept Escrow</a>
-                </div>
+                @if(Auth()->user()->isUser())
+                    <div class="d-flex mt-2">
+                        <a href="#" class="btn btn-sm btn-primary">Create Escrow</a>
+                        <a href="#" class="btn btn-sm btn-success ml-1">Accept Escrow</a>
+                    </div>
+                @endif
             </div><!-- .nk-sidebar-widget -->
 
             <div class="nk-sidebar-menu pt-2">
@@ -75,48 +77,58 @@
                     <li class="nk-menu-heading">
                         <h6 class="overline-title">Menu</h6>
                     </li>
-                    <li class="nk-menu-item">
-                        <a href="{{route('dashboard')}}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-dashboard"></em></span>
-                            <span class="nk-menu-text">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nk-menu-item">
-                        <a href="{{route('marketplace-index')}}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-coins"></em></span>
-                            <span class="nk-menu-text">EscrowVault</span>
-                        </a>
-                    </li>
-                    <li class="nk-menu-item">
-                        <a href="{{route('wallet-index')}}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-wallet-alt"></em></span>
-                            <span class="nk-menu-text">My Wallets</span>
-                        </a>
-                    </li>
-                    <li class="nk-menu-item">
-                        <a href="{{route('myaccount')}}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-account-setting"></em></span>
-                            <span class="nk-menu-text">My Account</span>
-                        </a>
-                    </li>
-                    <li class="nk-menu-item">
-                        <a href="{{route('security')}}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-security"></em></span>
-                            <span class="nk-menu-text">Security</span>
-                        </a>
-                    </li>
-                    <li class="nk-menu-item">
-                        <a href="{{route('notification')}}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-notify"></em></span>
-                            <span class="nk-menu-text">Notification</span>
-                        </a>
-                    </li>
-                    <li class="nk-menu-item">
-                        <a href="{{route('marketcap')}}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-globe"></em></span>
-                            <span class="nk-menu-text">MarketCap</span>
-                        </a>
-                    </li>
+                    @if(Auth()->user()->isUser())
+                        <li class="nk-menu-item">
+                            <a href="{{route('dashboard')}}" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-dashboard"></em></span>
+                                <span class="nk-menu-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nk-menu-item">
+                            <a href="{{route('marketplace-index')}}" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-coins"></em></span>
+                                <span class="nk-menu-text">EscrowVault</span>
+                            </a>
+                        </li>
+                        <li class="nk-menu-item">
+                            <a href="{{route('wallet-index')}}" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-wallet-alt"></em></span>
+                                <span class="nk-menu-text">My Wallets</span>
+                            </a>
+                        </li>
+                        <li class="nk-menu-item">
+                            <a href="{{route('myaccount')}}" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-account-setting"></em></span>
+                                <span class="nk-menu-text">My Account</span>
+                            </a>
+                        </li>
+                        <li class="nk-menu-item">
+                            <a href="{{route('security')}}" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-security"></em></span>
+                                <span class="nk-menu-text">Security</span>
+                            </a>
+                        </li>
+                        <li class="nk-menu-item">
+                            <a href="{{route('notification')}}" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-notify"></em></span>
+                                <span class="nk-menu-text">Notification</span>
+                            </a>
+                        </li>
+                        <li class="nk-menu-item">
+                            <a href="{{route('marketcap')}}" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-globe"></em></span>
+                                <span class="nk-menu-text">MarketCap</span>
+                            </a>
+                        </li>
+                    @endif
+                    @if(Auth()->user()->isAdmin())
+                        <li class="nk-menu-item">
+                            <a href="{{route('admin_dashboard')}}" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                <span class="nk-menu-text">User Manage</span>
+                            </a>
+                        </li>
+                    @endif
                     <li class="nk-menu-item">
                         <a href="#" class="nk-menu-link dark-switch">
                             <span class="nk-menu-icon"><em class="icon ni ni-moon"></em></span>

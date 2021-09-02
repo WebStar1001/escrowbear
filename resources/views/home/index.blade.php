@@ -342,11 +342,14 @@
                     <div class="form-group">
                         <label class="form-label" for="email-address">Email address</label>
                         <div class="form-control-wrap">
-                            <input type="text" class="form-control" id="email-address" name="email_address" required>
+                            <input type="email" class="form-control" id="email-address" name="email_address" required>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <h3 class="form-label text-danger">Need more due diligence, User not in database</h3>
+                    </div>
                     <div class="form-group text-right">
-                        <button type="submit" class="btn btn-lg btn-primary">Receive Invitation</button>
+                        <button type="submit" class="btn btn-lg btn-primary" id="inviteButton" disabled>Receive Invitation</button>
                     </div>
                 </form>
             </div>
@@ -372,7 +375,6 @@
     gtag('config', 'UA-199462509-1');
 </script>
 <script type="text/javascript">
-
     $(document).ready(function () {
         $('.faq-item .header').click(function () {
             $(this).closest('.faq-item').toggleClass('collapsed');
@@ -397,7 +399,7 @@
         // animation
 
         // right to left
-        const options = { root: null, rootMargin: '0px', threshold: 1 }; 
+        const options = { root: null, rootMargin: '0px', threshold: 1 };
         const right2LeftAnimation = (entries, observer) => {
             entries.forEach(entry => {
                 entry.target.classList.toggle("slide-in-from-right", entry.isIntersecting);
