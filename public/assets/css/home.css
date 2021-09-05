@@ -1085,7 +1085,7 @@ body footer > div:first-child .copyright {
 }
 
 body footer > div:first-child .copyright .title {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: 24px;
     color: #fff;
@@ -1782,7 +1782,7 @@ body footer .footer_lang{
     }
 
     body footer > div:first-child .copyright .title {
-        font-size: 40px;
+        font-size: 30px;
         margin-bottom: 20px;
         line-height: 1;
     }
