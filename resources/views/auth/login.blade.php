@@ -24,6 +24,7 @@
     <div class="nk-main ">
         <div class="nk-wrap nk-wrap-nosidebar">
             <!-- content @s -->
+            <div class="login-header"></div>
             <div class="nk-content login-screen">
                 <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
                     <div class="brand-logo pb-3 text-center">

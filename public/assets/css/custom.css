@@ -76,7 +76,13 @@
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-
+.login-header{
+    background-image: url("/public/assets/img/bg-pattern.svg");
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    background-size: cover;
+}
 .login-screen {
     background-color: rgb(18, 29, 51);
     /*background-image: url("/public/assets/img/login-screen.svg");*/
