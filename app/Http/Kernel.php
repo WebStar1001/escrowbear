@@ -65,6 +65,7 @@ class Kernel extends HttpKernel
         'g2fa' => \App\Http\Middleware\Google2FAMiddleware::class,
         'admin' => \App\Http\Middleware\AdminAuthenticated::class,
         'user'  => \App\Http\Middleware\UserAuthenticated::class,
-        'verified'  => \App\Http\Middleware\UserVerified::class
+        'verified'  => \App\Http\Middleware\UserVerified::class,
+        'twofactor'     => \App\Http\Middleware\TwoFactor::class,
     ];
 }

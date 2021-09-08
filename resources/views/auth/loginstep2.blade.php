@@ -25,7 +25,7 @@
         <div class="nk-wrap nk-wrap-nosidebar">
             <!-- content @s -->
             <div class="login-header"></div>
-            <div class="nk-content login-screen">
+            <div class="nk-content login-screen" id="loginScreen1">
                 <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
                     <div class="brand-logo pb-3 text-center">
                         <a href="{{route('home')}}" class="logo-link">
@@ -36,63 +36,50 @@
                         <h3 class="title">Welcome to EscrowBear</h3>
                     </div>
                     <div class="brand-logo pb-2 text-center">
-                        <p class="sub-title">Login using your email address</p>
+                        <p class="sub-title">Enter your password to login</p>
                     </div>
                     <div class="card card-bordered">
+                        <div style="padding: 20px 0 0 30px;">
+                            <em class="icon ni ni-arrow-left"></em> Signing in with {{$email}}
+                            <p class="pl-2">Put Account Password Here</p>
+                        </div>
                         <div class="card-inner card-inner-lg">
                             <form action="{{route('login')}}" method="post">
                                 @csrf
                                 <div class="form-group">
                                     <div class="form-label-group">
-                                        <label class="form-label" for="default-01">Email Address</label>
+                                        <label class="form-label" for="password">Password</label>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" id="email" name="email"
-                                           placeholder="Enter your email address or username" required>
-
+                                    <div class="form-control-wrap">
+                                        <a href="#" class="form-icon form-icon-right passcode-switch"
+                                           data-target="password">
+                                            <em class="passcode-icon icon-show icon ni ni-eye"></em>
+                                            <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
+                                        </a>
+                                        <input type="hidden" name="email" value="{{$email}}"/>
+                                        <input type="password" class="form-control form-control-lg" id="password"
+                                               name="password" placeholder="Enter your passcode">
+                                    </div>
+                                    @if($errors->any())
+                                        <div class="help-block mt-2 text-danger">
+                                            <strong>{{ $errors->first() }}</strong>
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="form-group">
-                                    {{--                                    <div class="form-label-group">--}}
-                                    {{--                                        <label class="form-label" for="password">Passcode</label>--}}
-                                    {{--                                        <a class="link link-primary link-sm" href="html/pages/auths/auth-reset-v2.html">Forgot--}}
-                                    {{--                                            Code?</a>--}}
-                                    {{--                                    </div>--}}
-                                    {{--                                    <div class="form-control-wrap">--}}
-                                    {{--                                        <a href="#" class="form-icon form-icon-right passcode-switch"--}}
-                                    {{--                                           data-target="password">--}}
-                                    {{--                                            <em class="passcode-icon icon-show icon ni ni-eye"></em>--}}
-                                    {{--                                            <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>--}}
-                                    {{--                                        </a>--}}
-                                    {{--                                        <input type="password" class="form-control form-control-lg" id="password"--}}
-                                    {{--                                               name="password" placeholder="Enter your passcode">--}}
-                                    {{--                                        @if($errors->has('email'))--}}
-                                    {{--                                            <span class="help-block">--}}
-                                    {{--                                                <strong>{{ $errors->first() }}</strong>--}}
-                                    {{--                                            </span>--}}
-                                    {{--                                        @endif--}}
-                                    {{--                                    </div>--}}
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-lg btn-primary btn-block">Continue</button>
+                                    <button class="btn btn-lg btn-primary btn-block">Log In</button>
+                                    <p class="text-center pt-1"><a href="">Forgot Password?</a></p>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="brand-logo pt-1 text-center">
-                        <p class="sub-title">Don't you have EscrowBear Account? <a href="#">Get Invited</a></p>
-                    </div>
-                    <div class="brand-logo pt-2 text-center">
-                        <p class="sub-description">Please check that you are visiting the correct URL</p>
-                    </div>
-                    <div class="brand-logo pt-2 text-center">
-                        <span class="sub-url">
-                            <em class="ni ni-lock-fill"></em> https://escrowbear.com/login
-                        </span>
+                        <div class="justify-content-center text-center sub-title">Earth's only HyperEscrow</div>
                     </div>
                     <div class="footerDiv">
-                        <div class="justify-content-center text-center detail-1">Earth's only HyperEscrow
-                            <a href="#">Log in <em class="icon ni ni-arrow-to-right"></em> </a>
-                        </div>
-                        <ul class="nav nav-sm justify-content-center langDiv pt-2">
+                        <p class="sub-description text-center">Don't you have EscrowBear Account? <a href="#">Get
+                                Invited</a></p>
+                        <ul class="nav nav-sm justify-content-center langDiv">
                             <li class="nav-item dropup active current-page">
                                 <a class="dropdown-toggle dropdown-indicator has-indicator nav-link"
                                    data-toggle="dropdown" data-offset="0,10"><span>English</span></a>
@@ -129,8 +116,8 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="nav-item"> <a class="nav-link">version 1.3</a></li>
-                            <li class="nav-item"> <a href="#" class="nav-link">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link">version 1.3</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -143,5 +130,6 @@
 </div>
 <script src="{{asset_url('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
 <script src="{{asset_url('dashlite/assets/js/scripts.js?ver=2.2.0')}}"></script>
+<script src="{{asset_url('assets/js/login.js?ver=2.2.0')}}"></script>
 </body>
 </html>

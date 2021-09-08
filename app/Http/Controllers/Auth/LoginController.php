@@ -7,6 +7,8 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use App\Models\User;
+use App\Notifications\TwoFactorCode;
 
 class LoginController extends Controller
 {
@@ -40,21 +42,44 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    function showLoginStep1()
+    {
+        return view('auth/loginstep1');
+    }
+
+    function showLoginStep2(Request $request)
+    {
+        return view('auth/loginstep2', ['email' => $request->email]);
+    }
+
+    function usercheck(Request $request)
+    {
+
+        $isUser = User::where('email', $request->email)->first();
+
+        if ($isUser) {
+            return redirect()->route('loginstep2', ['email' => $request->email]);
+        } else {
+            return redirect()->back()->withErrors(['Unregistered Email']);
+        }
+
+    }
+
     function authenticated(Request $request, $user)
     {
-        $user->update([
-            'last_login_at' => Carbon::now()->toDateTimeString(),
-            'last_login_ip' => $request->getClientIp()
-        ]);
-        if($user->isAdmin()) {
-            return redirect(route('admin_dashboard'));
-        }
-
-        // to user dashboard
-        else if($user->isUser()) {
-            return redirect(route('dashboard'));
-        }
-
-        abort(404);
+//        $user->update([
+//            'last_login_at' => Carbon::now()->toDateTimeString(),
+//            'last_login_ip' => $request->getClientIp()
+//        ]);
+//        if ($user->isAdmin()) {
+//            return redirect(route('admin_dashboard'));
+//        } // to user dashboard
+//        else if ($user->isUser()) {
+//            return redirect(route('dashboard'));
+//        }
+//
+//        abort(404);
+        $user->generateTwoFactorCode();
+        $user->notify(new TwoFactorCode());
     }
 }

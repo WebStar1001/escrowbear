@@ -19,18 +19,38 @@ Route::get('/', function () {
 
 Route::get('/sitemaps.xml', [App\Http\Controllers\HomeController::class, 'sitemaps'])
     ->name('sitemaps');
+Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginStep1'])->name('login');
+
+Route::get('loginstep2', [App\Http\Controllers\Auth\LoginController::class, 'showLoginStep2'])->name('loginstep2');
+
+Route::post('login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
+
+Route::post('usercheck', [App\Http\Controllers\Auth\LoginController::class, 'usercheck']);
+
+Route::post('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+
+// Registration Routes...
+Route::get('register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('register', [App\Http\Controllers\Auth\RegisterController::class, 'register']);
+
+// Password Reset Routes...
+Route::get('password/reset', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'showLinkRequestForm']);
+Route::post('password/email', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail']);
+Route::get('password/reset/{token}', [App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm']);
+Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController::class, 'reset']);
+
+Route::get('verify/resend', 'Auth\TwoFactorController@resend')->name('verify.resend');
+Route::resource('verify', 'Auth\TwoFactorController')->only(['index', 'store']);
 
 Route::post('/get-invited', [App\Http\Controllers\HomeController::class, 'getInvited'])
     ->name('get-invited');
 
-Auth::routes();
-
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])
     ->name('dashboard')
-    ->middleware(['auth', 'g2fa', 'verified']);
+    ->middleware(['auth', 'twofactor', 'g2fa', 'verified']);
 Route::get('/dashboard/welcome', [App\Http\Controllers\WelcomeController::class, 'index'])
     ->name('welcome')
-    ->middleware(['auth', 'g2fa']);
+    ->middleware(['auth', 'twofactor', 'g2fa']);
 
 Route::get('/marketplace', [App\Http\Controllers\MaketplaceController::class, 'index'])
     ->name('marketplace-index')
