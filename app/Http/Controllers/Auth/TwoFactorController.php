@@ -24,7 +24,7 @@ class TwoFactorController extends Controller
         {
             $user->resetTwoFactorCode();
 
-            return redirect()->route('admin.home');
+            return redirect()->route('dashboard');
         }
 
         return redirect()->back()
