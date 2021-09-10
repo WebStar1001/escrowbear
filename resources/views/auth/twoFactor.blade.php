@@ -57,16 +57,21 @@
                                             <b>Open the link in this browser window.</b>
                                         </p>
                                     </div>
-                                    @if($errors->any())
-                                        <div class="help-block mt-2 text-danger">
-                                            <strong>{{ $errors->first() }}</strong>
-                                        </div>
-                                    @endif
                                 </div>
                                 <div class="form-group">
                                     <a href="{{ route('verify.resend') }}" class="btn btn-lg btn-secondary btn-block">Email
                                         didn't arrive?</a>
                                 </div>
+                                @if($errors->any())
+                                    <div class="help-block mt-2 text-danger">
+                                        <strong>{{ $errors->first() }}</strong>
+                                    </div>
+                                @endif
+                                @if(session()->has('message'))
+                                    <p class="alert alert-info">
+                                        {{ session()->get('message') }}
+                                    </p>
+                                @endif
                             </form>
                         </div>
                     </div>
