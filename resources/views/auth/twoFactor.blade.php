@@ -35,26 +35,24 @@
                     <div class="brand-logo pb-3 text-center">
                         <h3 class="title">Welcome to EscrowBear</h3>
                     </div>
-                    <div class="brand-logo pb-2 text-center">
-                        <p class="sub-title">Enter your password to login</p>
-                    </div>
                     <div class="card card-bordered">
                         <div style="padding: 20px 0 0 30px;">
-                            <em class="icon ni ni-arrow-left"></em> Signing in with {{Auth::user()->email}}
+                            {{--                            <em class="icon ni ni-arrow-left"></em> Signing in with {{Auth::user()->email}}--}}
+                            <em class="icon ni ni-arrow-left"></em> Signing in with eric9178vadim@gmail.com
                         </div>
                         <div class="card-inner card-inner-lg">
                             <form action="{{ route('verify.store') }}" method="post">
                                 @csrf
                                 <div class="form-group">
                                     <div class="row justify-content-center">
-                                        <em class="icon ni ni-laptop" style="font-size: 30px;"></em>
+                                        <em class="icon ni ni-laptop" style="font-size: 40px;color:blue;"></em>
                                     </div>
-                                    <div class="row">
-                                        <p style="font-size: 30px">
+                                    <div class="row justify-content-center">
+                                        <p style="font-size: 22px;color:black">
                                             Verify Your Device
                                         </p>
                                         <p>
-                                          If you have an account registered with this email address,
+                                            If you have an account registered with this email address,
                                             you will receive an email with a link to verify your device,
                                             <b>Open the link in this browser window.</b>
                                         </p>
@@ -66,7 +64,8 @@
                                     @endif
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-lg btn-secondary btn-block">Email didn't arrive?</button>
+                                    <a href="{{ route('verify.resend') }}" class="btn btn-lg btn-secondary btn-block">Email
+                                        didn't arrive?</a>
                                 </div>
                             </form>
                         </div>

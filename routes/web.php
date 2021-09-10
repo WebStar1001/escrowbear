@@ -40,7 +40,10 @@ Route::get('password/reset/{token}', [App\Http\Controllers\Auth\ResetPasswordCon
 Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController::class, 'reset']);
 
 Route::get('verify/resend', [App\Http\Controllers\Auth\TwoFactorController::class, 'resend'])->name('verify.resend');
-Route::resource('verify', App\Http\Controllers\Auth\TwoFactorController::class)->only(['index', 'store']);
+
+Route::get('verify', [App\Http\Controllers\Auth\TwoFactorController::class, 'index'])->name('verify.index');
+
+Route::get('store', [App\Http\Controllers\Auth\TwoFactorController::class, 'store'])->name('verify.store');
 
 Route::post('/get-invited', [App\Http\Controllers\HomeController::class, 'getInvited'])
     ->name('get-invited');

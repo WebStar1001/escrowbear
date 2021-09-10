@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -72,7 +73,7 @@ class User extends Authenticatable implements MustVerifyEmail
     public function generateTwoFactorCode()
     {
         $this->timestamps = false;
-        $this->two_factor_code = rand(100000, 999999);
+        $this->two_factor_code = Str::random();
         $this->two_factor_expires_at = now()->addMinutes(10);
         $this->save();
     }
