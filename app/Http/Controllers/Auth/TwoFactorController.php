@@ -28,7 +28,7 @@ class TwoFactorController extends Controller
             return redirect()->route('dashboard');
         }
 
-        return redirect()->back()
+        return redirect()->route('verify.index')
             ->withErrors(['two_factor_code' =>
                 'The two factor code you have entered does not match']);
     }
