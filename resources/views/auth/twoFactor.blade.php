@@ -46,8 +46,18 @@
                             <form action="{{ route('verify.store') }}" method="post">
                                 @csrf
                                 <div class="form-group">
+                                    <div class="row justify-content-center">
+                                        <em class="icon ni ni-laptop" style="font-size: 30px;"></em>
+                                    </div>
                                     <div class="row">
-                                        <em class="icon ni ni-laptop"></em>
+                                        <p style="font-size: 30px">
+                                            Verify Your Device
+                                        </p>
+                                        <p>
+                                          If you have an account registered with this email address,
+                                            you will receive an email with a link to verify your device,
+                                            <b>Open the link in this browser window.</b>
+                                        </p>
                                     </div>
                                     @if($errors->any())
                                         <div class="help-block mt-2 text-danger">
@@ -56,18 +66,12 @@
                                     @endif
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-lg btn-primary btn-block">Log In</button>
-                                    <p class="text-center pt-1"><a href="">Forgot Password?</a></p>
+                                    <button class="btn btn-lg btn-secondary btn-block">Email didn't arrive?</button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <div class="brand-logo pt-1 text-center">
-                        <div class="justify-content-center text-center sub-title">Earth's only HyperEscrow</div>
-                    </div>
                     <div class="footerDiv">
-                        <p class="sub-description text-center">Don't you have EscrowBear Account? <a href="#">Get
-                                Invited</a></p>
                         <ul class="nav nav-sm justify-content-center langDiv">
                             <li class="nav-item dropup active current-page">
                                 <a class="dropdown-toggle dropdown-indicator has-indicator nav-link"
