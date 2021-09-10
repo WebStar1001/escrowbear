@@ -129,7 +129,5 @@
     </div>
 </div>
 <script src="{{asset_url('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
-<script src="{{asset_url('dashlite/assets/js/scripts.js?ver=2.2.0')}}"></script>
-<script src="{{asset_url('assets/js/login.js?ver=2.2.0')}}"></script>
 </body>
 </html>

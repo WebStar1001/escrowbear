@@ -50,10 +50,11 @@ Route::post('/get-invited', [App\Http\Controllers\HomeController::class, 'getInv
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])
     ->name('dashboard')
-    ->middleware(['auth', 'twofactor', 'g2fa', 'verified']);
+    ->middleware(['auth', 'g2fa', 'verified']);
+//    ->middleware(['auth', 'twofactor', 'g2fa', 'verified']);
 Route::get('/dashboard/welcome', [App\Http\Controllers\WelcomeController::class, 'index'])
     ->name('welcome')
-    ->middleware(['auth', 'twofactor', 'g2fa']);
+    ->middleware(['auth', 'g2fa']);
 
 Route::get('/marketplace', [App\Http\Controllers\MaketplaceController::class, 'index'])
     ->name('marketplace-index')

@@ -379,7 +379,6 @@
 </div>
 </body>
 <script src="{{asset_url('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
-<script src="{{asset_url('dashlite/assets/js/scripts.js?ver=2.2.0')}}"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199462509-1">
