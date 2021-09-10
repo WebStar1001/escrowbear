@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 
 class TwoFactorController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('auth.twoFactor');
+        return view('auth.twoFactor')
+            ->with('email', $request->email);
     }
 
     public function store(Request $request)
