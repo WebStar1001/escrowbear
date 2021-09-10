@@ -125,7 +125,7 @@
 
   NioApp.PassSwitch = function () {
     NioApp.Passcode('.passcode-switch');
-  }; // Toastr Message @v1.0 
+  }; // Toastr Message @v1.0
 
 
   NioApp.Toast = function (msg, ttype, opt) {
@@ -535,19 +535,24 @@
 
 
   NioApp.ModeSwitch = function () {
-    var toggle = $('.dark-switch');
+      if (localStorage.getItem('is_dark') == 'true') {
+          $(this).toggleClass('active');
+          $body.toggleClass('dark-mode');
+      }
+      var toggle = $('.dark-switch');
 
-    if ($body.hasClass('dark-mode')) {
-      toggle.addClass('active');
-    } else {
-      toggle.removeClass('active');
-    }
+      if ($body.hasClass('dark-mode')) {
+          toggle.addClass('active');
+      } else {
+          toggle.removeClass('active');
+      }
 
-    toggle.on('click', function (e) {
-      e.preventDefault();
-      $(this).toggleClass('active');
-      $body.toggleClass('dark-mode');
-    });
+      toggle.on('click', function (e) {
+          e.preventDefault();
+          $(this).toggleClass('active');
+          $body.toggleClass('dark-mode');
+          localStorage.setItem('is_dark', $(this).hasClass('active'));
+      });
   }; // Knob @v1.0
 
 

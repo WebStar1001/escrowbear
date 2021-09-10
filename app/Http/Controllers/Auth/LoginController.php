@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
+
 use App\Models\User;
 use App\Notifications\TwoFactorCode;
 
@@ -67,19 +67,14 @@ class LoginController extends Controller
 
     function authenticated(Request $request, $user)
     {
-//        $user->update([
-//            'last_login_at' => Carbon::now()->toDateTimeString(),
-//            'last_login_ip' => $request->getClientIp()
-//        ]);
-//        if ($user->isAdmin()) {
-//            return redirect(route('admin_dashboard'));
-//        } // to user dashboard
-//        else if ($user->isUser()) {
-//            return redirect(route('dashboard'));
-//        }
-//
-//        abort(404);
-        $user->generateTwoFactorCode();
-        $user->notify(new TwoFactorCode());
+
+        if ($user->isAdmin()) {
+            return redirect(route('admin_dashboard'));
+        } // to user dashboard
+        else if ($user->isUser()) {
+            $user->generateTwoFactorCode();
+            $user->notify(new TwoFactorCode());
+        }
+        abort(404);
     }
 }

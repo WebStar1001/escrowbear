@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class TwoFactorController extends Controller
 {
@@ -21,8 +22,12 @@ class TwoFactorController extends Controller
 
         $user = auth()->user();
 
-        if($request->input('two_factor_code') == $user->two_factor_code)
-        {
+        if ($request->input('two_factor_code') == $user->two_factor_code) {
+
+            $user->update([
+                'last_login_at' => Carbon::now()->toDateTimeString(),
+                'last_login_ip' => $request->getClientIp()
+            ]);
             $user->resetTwoFactorCode();
 
             return redirect()->route('dashboard');

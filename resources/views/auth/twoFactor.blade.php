@@ -37,8 +37,7 @@
                     </div>
                     <div class="card card-bordered">
                         <div style="padding: 20px 0 0 30px;">
-                            {{--                            <em class="icon ni ni-arrow-left"></em> Signing in with {{Auth::user()->email}}--}}
-                            <em class="icon ni ni-arrow-left"></em> Signing in with eric9178vadim@gmail.com
+                            <em class="icon ni ni-arrow-left"></em> Signing in with {{Auth::user()->email}}
                         </div>
                         <div class="card-inner card-inner-lg">
                             <form action="{{ route('verify.store') }}" method="post">
