@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Closure;
 
 use App\Models\User;
 use App\Notifications\TwoFactorCode;
@@ -72,8 +73,12 @@ class LoginController extends Controller
             return redirect(route('admin_dashboard'));
         } // to user dashboard
         else if ($user->isUser()) {
-            $user->generateTwoFactorCode();
-            $user->notify(new TwoFactorCode());
+            if (env('APP_ENV' != 'local')) {
+                $user->generateTwoFactorCode();
+                $user->notify(new TwoFactorCode());
+            }else{
+                return redirect(route('dashboard'));
+            }
         }
         abort(404);
     }

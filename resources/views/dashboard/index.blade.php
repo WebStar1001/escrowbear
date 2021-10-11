@@ -307,7 +307,7 @@
                                                 <div class="container d-none" id="XRPStatus">
                                                     <div class="row justify-content-lg-end justify-content-md-start">
                                                         <div class="col-lg-2 col-md-3 col-5">
-                                                            <em class="bg-usdt-dim icon-circle icon ni ni-sign-usdt"></em>
+                                                            <em class="bg-xrp-dim icon-circle icon ni ni-sign-xrp"></em>
                                                             <span class="text-success pl-2">XRP</span></div>
                                                         <div class="col-lg-2 col-md-4 col-6">
                                                             <p style="text-decoration: underline;">Price</p>

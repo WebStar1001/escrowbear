@@ -377,6 +377,23 @@
         </div>
     </div>
 </div>
+<div class="modal fade" tabindex="-1" id="LandingPageNoticeModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                <em class="icon ni ni-cross"></em>
+            </a>
+            <div class="modal-header">
+                <h5 class="modal-title">Landing Page Notice</h5>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique earum necessitatibus
+                    nesciunt! Quia id expedita asperiores voluptatem odit quis fugit sapiente assumenda sunt
+                    voluptatibus atque facere autem, omnis explicabo.</p>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 <script src="{{asset_url('dashlite/assets/js/bundle.js?ver=2.2.0')}}"></script>
 
@@ -396,6 +413,7 @@
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
+        $('#LandingPageNoticeModal').modal('show');
         $('.faq-item .header').click(function () {
             $(this).closest('.faq-item').toggleClass('collapsed');
         });
