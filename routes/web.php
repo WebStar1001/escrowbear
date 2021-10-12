@@ -115,6 +115,10 @@ Route::post('/register/kyc-submit', [App\Http\Controllers\WelcomeController::cla
     ->name('register-kyc-submit')
     ->middleware(['auth']);
 
+Route::get('/escrow/index', [App\Http\Controllers\EscrowController::class, 'index'])
+    ->name('escrow-index')
+    ->middleware(['auth']);
+
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
 Route::match(['get', 'post'], '/botman', [App\Http\Controllers\BotManController::class, 'handle']);

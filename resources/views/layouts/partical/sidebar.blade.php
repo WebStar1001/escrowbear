@@ -35,7 +35,7 @@
                 </div>
                 @if(is_verified() && Auth()->user()->isUser())
                     <div class="d-flex">
-                        <a href="#" class="btn btn-sm btn-primary">Create Escrow</a>
+                        <a href="{{route('escrow-index')}}" class="btn btn-sm btn-primary">Create Escrow</a>
                         <a href="#" class="btn btn-sm btn-success ml-2">Accept Escrow</a>
                     </div>
                 @endif
@@ -65,7 +65,7 @@
                 </a>
                 @if(Auth()->user()->isUser())
                     <div class="d-flex mt-2">
-                        <a href="#" class="btn btn-sm btn-primary">Create Escrow</a>
+                        <a href="{{route('escrow-index')}}" class="btn btn-sm btn-primary">Create Escrow</a>
                         <a href="#" class="btn btn-sm btn-success ml-1">Accept Escrow</a>
                     </div>
                 @endif
