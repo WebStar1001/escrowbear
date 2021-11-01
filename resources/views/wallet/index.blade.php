@@ -86,4 +86,36 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" tabindex="-1" id="masterCodeModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Password for Wallet</h5>
+                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                        <em class="icon ni ni-cross"></em>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <form action="#" class="form-validate is-alter">
+                        <div class="form-group">
+                            <label class="form-label" for="full-name">Password</label>
+                            <div class="form-control-wrap">
+                                <input type="text" class="form-control" id="full-name" required>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-lg btn-primary">Open Wallets</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light">
+                    <span class="sub-text"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+@section('script')
+    <script src="{{asset_url('assets/js/wallet.js?ver=2.2.0')}}"></script>
 @endsection

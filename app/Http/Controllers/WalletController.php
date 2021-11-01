@@ -27,6 +27,11 @@ class WalletController extends Controller
      */
     public function index()
     {
+        return view('wallet/walletPassword');
+    }
+
+    public function viewWallet()
+    {
         $user = Auth::user();
         $wallets = Wallet::where('user_id', $user->id)
             ->orderby('balance')->get();

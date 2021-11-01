@@ -55,4 +55,6 @@
             </div>
         </div>
     </div>
+    <!-- Modal Trigger Code -->
+
 @endsection

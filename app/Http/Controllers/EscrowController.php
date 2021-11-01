@@ -29,7 +29,7 @@ class EscrowController extends Controller
     public function index()
     {
 
-        return view('escrow/index');
+        return view('escrow/firstStep');
     }
 
 }
