@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-            <div class="nk-block hideSection" id="firstStepBlock">
+            <div class="nk-block" id="firstStepBlock">
                 <div class="row g-gs">
                     <div class="col-md-6 col-sm-12 border-gray border-right">
                         <h3>What is being sold?</h3>
@@ -21,7 +21,7 @@
                             Give this transaction a name for reference, describing what is being transacted, providing
                             as much detail as necessary. Both fields are required to move forward.
                         </p>
-                        <p style="font-size: 20px;">
+                        <p style="font-size: 20px;">Choose your Role - Buyer or Seller
                             Additionally, you can add a URL for reference, if the item/service is listed on a website.
                             You can also choose to add shipping details for items being shipped.
                         </p>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="nk-block " id="thirdStepBlock">
+            <div class="nk-block hideSection" id="thirdStepBlock">
                 <div class="row g-gs">
                     <div class="col-md-6 col-sm-12 border-gray border-right">
                         <h3>What is being sold?</h3>
@@ -128,8 +128,7 @@
                             <label class="form-label" for="marketPublicOption">Do you want to list this escrow publicly
                                 in the marketplace?
                             </label><br>
-                            <div class="custom-control-lg custom-switch">
-{{--                                <label class="custom-control-label" for="customSwitch1">Yes</label>--}}
+                            <div class="custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input" id="marketPublicOption">
                                 <label class="custom-control-label" for="marketPublicOption">Yes</label>
                             </div>
@@ -151,7 +150,7 @@
                     </div>
                     <div class="col-2">
                         <div class="form-group">
-                            <button class="btn btn-lg btn-primary btn-block" id="nextBtn" disabled>Next</button>
+                            <button class="btn btn-lg btn-primary btn-block" id="nextBtn" disabled>Finish</button>
                         </div>
                     </div>
                 </div>

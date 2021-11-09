@@ -74,8 +74,11 @@ Moralis.start({serverUrl, appId});
         firstStep.fadeIn()
     });
     secondStep.find('#nextBtn').click(function () {
-        firstStep.fadeOut();
-        secondStep.fadeIn()
+        secondStep.fadeOut();
+        thirdStep.fadeIn()
+    });
+    thirdStep.find('#nextBtn').click(function () {
+        alert('finished');
     });
 
 
