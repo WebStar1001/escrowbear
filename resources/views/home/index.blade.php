@@ -384,12 +384,20 @@
                 <em class="icon ni ni-cross"></em>
             </a>
             <div class="modal-header">
-                <h5 class="modal-title">Landing Page Notice</h5>
+                <h5 class="modal-title">ESCROWBEAR COIN NOTICE</h5>
             </div>
             <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique earum necessitatibus
-                    nesciunt! Quia id expedita asperiores voluptatem odit quis fugit sapiente assumenda sunt
-                    voluptatibus atque facere autem, omnis explicabo.</p>
+                <p>Due to high network transaction fees (GAS / GWEI) we have deactivated all tokens other than Ethereum
+                    (ETH) from the Escaroo escrow service. We decided to do this because too many users were
+                    experiencing unrealistic gas fees when paying for an escrow transaction. Network fees have nothing
+                    to do with Escaroo but are dictated by current network activity. High transaction volume translates
+                    into higher networks fees and slower transaction times. ERC20 Tokens like USDT, DAI and WBTC
+                    inherently use more gas.</p>
+                <p>
+                    Until we figure out a solution that makes sense for our clients, Ethereum will be the only token
+                    available for escrow. That said, Bitcoin is coming back soon! We will keep you updated on our
+                    progress. Thanks.
+                </p>
             </div>
         </div>
     </div>
