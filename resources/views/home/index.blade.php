@@ -393,7 +393,7 @@
                     to do with Escaroo but are dictated by current network activity. High transaction volume translates
                     into higher networks fees and slower transaction times. ERC20 Tokens like USDT, DAI and WBTC
                     inherently use more gas.</p>
-                <p>
+                <p class="pt-2">
                     Until we figure out a solution that makes sense for our clients, Ethereum will be the only token
                     available for escrow. That said, Bitcoin is coming back soon! We will keep you updated on our
                     progress. Thanks.
