@@ -1,6 +1,6 @@
 <footer class="d-flex flex-column">
     <div class="w-100 d-flex mb-3 justify-content-between justify-content-xxl-start">
-        <img src="{{asset_url('assets/img/home/mark.png')}}" />
+        <img src="{{asset_url('assets/img/home/mark.png')}}" class="footer-logo"/>
         <div class="copyright">
             <p class="title">EscrowBear</p>
             <p class="description">© 2021 All Rights Reserved</p>
